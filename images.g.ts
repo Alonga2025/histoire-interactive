@@ -182,25 +182,6 @@ e6e66688888888888888888888888888888888888888888888888888888888888888888888888888
 8888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888
 ee88888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888
 `;
-            case "image2":
-            case "Sprite 2":return img`
-. . . . . . . . . . . . . 
-. . . f f f f f . . . . . 
-. . f f f f f 4 f f . . . 
-. f f f f f 4 4 f f f . . 
-. f f 4 f f f f f f f . . 
-. 4 4 f f f e e f f 4 . . 
-. . e e e e e e e e 4 . . 
-. . e b f e e f b e . . . 
-. . e 1 f e e f 1 e . . . 
-. . e e e e e e e e . . . 
-. . f f e e e e f f . . . 
-. f f 2 2 2 2 2 2 f f . . 
-. f f 2 2 2 2 2 2 f f . . 
-. e e 2 2 2 2 2 2 e e . . 
-. . . f f f f f f . . . . 
-. . . f f . . f f . . . . 
-`;
             case "image4":
             case "Animal de compagnie 1":return img`
 . . . . . . . . . . b 5 b . . . 
@@ -219,25 +200,6 @@ c b d d c c b 5 5 5 5 5 5 5 b .
 . c d d d d d d 5 5 5 5 5 d b . 
 . . c b d d d d d 5 5 5 b b . . 
 . . . c c c c c c c c b b . . . 
-`;
-            case "image5":
-            case "Fille 1":return img`
-. . . . . . . . . . . . . . . . 
-. . . . f f f f f f f f . . . . 
-. . . f f f c f f f c c f . . . 
-. . f c f f f c f f f c c f . . 
-. f f c f f f f f f f c f f . . 
-. f f f f f c e e f f f f c f . 
-. f c f f f e e e e f f f c f . 
-. f f f f b f e e f b f f c f . 
-. f f f e 1 f e e f 1 e f c f . 
-f f f f e e e e e e e f f f f f 
-f f f f f f e e e e f f f f c f 
-. f b e f b d d d d b f e b f . 
-. . e e c d d d d d d c e e . . 
-. . e e b d b d b d b b e e . . 
-. . . f f 1 d 1 d 1 d f f . . . 
-. . . . . f f b b f f . . . . . 
 `;
             case "image3":
             case "Sprite 1":return img`
@@ -399,6 +361,44 @@ eeee2eeeeffffffffffffffffffffffffeeffffeeeeeeeeee22eeeee222ee2222ee2222222222222
 222222e2eeeeebbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbeeeee2e222222
 222222e2ebbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbe2e222222
 222222eeebbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbeee222222
+`;
+            case "image2":
+            case "Sprite 2":return img`
+. . . . . . . . . . . . . 
+. . . f f f f f . . . . . 
+. . f f f f f 4 f f . . . 
+. f f f f f 4 4 f f f . . 
+. f f 4 f f f f f f f . . 
+. 4 4 f f f e e f f 4 . . 
+. . e e e e e e e e 4 . . 
+. . e b f e e f b e . . . 
+. . e 1 f e e f 1 e . . . 
+. . e e e e e e e e . . . 
+. . f f e e e e f f . . . 
+. f f 2 2 2 2 2 2 f f . . 
+. f f 2 2 2 2 2 2 f f . . 
+. e e 2 2 2 2 2 2 e e . . 
+. . . f f f f f f . . . . 
+. . . f f . . f f . . . . 
+`;
+            case "image5":
+            case "Fille 1":return img`
+. . . . . . . . . . . . . . . . 
+. . . . f f f f f f f f . . . . 
+. . . f f f c f f f c c f . . . 
+. . f c f f f c f f f c c f . . 
+. f f c f f f f f f f c f f . . 
+. f f f f f c e e f f f f c f . 
+. f c f f f e e e e f f f c f . 
+. f f f f b f e e f b f f c f . 
+. f f f e 1 f e e f 1 e f c f . 
+f f f f e e e e e e e f f f f f 
+f f f f f f e e e e f f f f c f 
+. f b e f b d d d d b f e b f . 
+. . e e c d d d d d d c e e . . 
+. . e e b d b d b d b b e e . . 
+. . . f f 1 d 1 d 1 d f f . . . 
+. . . . . f f b b f f . . . . . 
 `;
         }
         return null;
