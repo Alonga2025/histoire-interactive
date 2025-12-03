@@ -2,6 +2,7 @@ namespace SpriteKind {
     export const Bouton = SpriteKind.create()
     export const Papi = SpriteKind.create()
     export const personnage = SpriteKind.create()
+    export const tronc = SpriteKind.create()
 }
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Papi, function (sprite, otherSprite) {
     game.showLongText("Jeun homme. Je n'ais pas beaucoup de temps pour te parler : ton oncle est dans la foret, blessé sans aucune aide, ta mére t'en a surrement déja parlé", DialogLayout.Top)
@@ -24,7 +25,9 @@ function créerpartie () {
         game.showLongText("Avance vers lui pour lui parler.", DialogLayout.Top)
         menagepartie()
     } else if (partie == 2) {
-    	
+        tiles.setCurrentTilemap(tilemap`niveau`)
+        arbre = sprites.create(assets.image`myImage`, SpriteKind.tronc)
+        tiles.placeOnTile(arbre, tiles.getTileLocation(7, 10))
     } else {
     	
     }
@@ -37,6 +40,7 @@ function menagepartie () {
     sprites.destroyAllSpritesOfKind(SpriteKind.Enemy)
     sprites.destroyAllSpritesOfKind(SpriteKind.personnage)
 }
+let arbre: Sprite = null
 let grandpere: Sprite = null
 let héros: Sprite = null
 let partie = 0
