@@ -28,6 +28,7 @@ function créerpartie () {
         tiles.setCurrentTilemap(tilemap`niveau`)
         arbre = sprites.create(assets.image`myImage`, SpriteKind.tronc)
         tiles.placeOnTile(arbre, tiles.getTileLocation(7, 10))
+        game.showLongText("iuyhtrfew", DialogLayout.Bottom)
     } else {
     	
     }
