@@ -559,6 +559,25 @@ b e 4 4 4 4 4 4 4 4 4 4 4 4 e b
 . b e 4 4 4 4 4 4 4 4 4 4 e b . 
 . . b b b b b b b b b b b b . . 
 `;
+            case "image11":
+            case "Pencarte":return img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. 4 e e e e e e e e e e e 4 4 . 
+. 4 4 e e e e e e e e e e e 4 . 
+. e e e e 4 e e e e e e e e e . 
+. e e e e e 4 e e e e e 4 4 e . 
+. e e e e e e 4 e e e e e 4 e . 
+. e e e e e e e e e e e e e 4 . 
+. . . . . . e e e . . . . . . . 
+. . . . . . e e e . . . . . . . 
+. . . . . . 4 e e . . . . . . . 
+. . . . . . e 4 e . . . . . . . 
+`;
         }
         return null;
     })
