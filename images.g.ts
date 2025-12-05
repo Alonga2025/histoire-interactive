@@ -145,25 +145,6 @@ c b d d c c b 5 5 5 5 5 5 5 b .
 . . c b d d d d d 5 5 5 b b . . 
 . . . c c c c c c c c b b . . . 
 `;
-            case "image2":
-            case "Sprite 2":return img`
-. . . . . . . . . . . . . 
-. . . f f f f f . . . . . 
-. . f f f f f 4 f f . . . 
-. f f f f f 4 4 f f f . . 
-. f f 4 f f f f f f f . . 
-. 4 4 f f f e e f f 4 . . 
-. . e e e e e e e e 4 . . 
-. . e b f e e f b e . . . 
-. . e 1 f e e f 1 e . . . 
-. . e e e e e e e e . . . 
-. . f f e e e e f f . . . 
-. f f 2 2 2 2 2 2 f f . . 
-. f f 2 2 2 2 2 2 f f . . 
-. e e 2 2 2 2 2 2 e e . . 
-. . . f f f f f f . . . . 
-. . . f f . . f f . . . . 
-`;
             case "jov3{i,Xv%Ky(z(Z[zXK":
             case "Coffre":return img`
 . . b b b b b b b b b b b b . . 
@@ -526,6 +507,25 @@ cccccdccccdddcccc...........................................cc...............
 . . . e b b e 5 5 5 5 f . . . . 
 . . . . e e 5 5 5 5 b c . . . . 
 . . . . . f f f f f f . . . . . 
+`;
+            case "image2":
+            case "Sprite 2":return img`
+. . . . . . . . . . . . . 
+. . . f f f f f . . . . . 
+. . f f f f f 4 f f . . . 
+. f f f f f 4 4 f f f . . 
+. f f 4 f f f f f f f . . 
+. 4 4 f f f e e f f 4 . . 
+. . e e e e e e e e 4 . . 
+. . e b f e e f b e . . . 
+. . e 1 f e e f 1 e . . . 
+. . e e e e e e e e . . . 
+. . f f e e e e f f . . . 
+. f f 2 2 2 2 2 2 f f . . 
+. f f 2 2 2 2 2 2 f f . . 
+. e e 2 2 2 2 2 2 e e . . 
+. . . f f f f f f . . . . 
+. . . f f . . f f . . . . 
 `;
         }
         return null;

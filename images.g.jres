@@ -9,11 +9,6 @@
         "mimeType": "image/x-mkcd-f4",
         "displayName": "Animal de compagnie 1"
     },
-    "image2": {
-        "data": "hwQNABAAAAAAAAAAAAAAAADwTwAA8O8AAP9P7u7/7wDw//S+4S8i//D///7vLiL/8P//7u4uIg/wT+/u7i4iD/BE7/7vLiL/AP//vuEvIv8A///u7v/vAADwTwQA8O8AAAAAAAAAAAAAAAAAAAAAAA==",
-        "mimeType": "image/x-mkcd-f4",
-        "displayName": "Sprite 2"
-    },
     "jov3{i,Xv%Ky(z(Z[zXK": {
         "data": "hwQQABAAAAAAu7u7y7y7C7Du7u677M6760Tk7rvs7rtLRETuu+zuC0tERO677O4LS0RE7rvs7gtLRETuu8vuC0tERO7NvO4LS0RE7s287gtLRETuu8vuC0tERO677O4LS0RE7rvs7gtLRETuu+zuC+tE5O677O67sO7u7rvszrsAu7u7y7y7Cw==",
         "mimeType": "image/x-mkcd-f4",
@@ -53,6 +48,11 @@
         "data": "hwQQABAAAAAAAAAAAAAAAAAAzAAAAAAAAMC7//8AAAAAwFv1/+/uAAC8VVX+77sOAMy7Vb77u/4AXLVbG+vu9cxVVVv/61v1XFVVW77rW/XAVbVbvutV9QDMu1Xu+1/7AMxVVf8P8AwAwFv1AAAAAADAuwwAAAAAAADMAAAAAAAAAAAAAAAAAA==",
         "mimeType": "image/x-mkcd-f4",
         "displayName": "sorciere"
+    },
+    "image2": {
+        "data": "hwQNABAAAAAAAAAAAAAAAADwTwAA8O8AAP9P7u7/7wDw//S+4S8i//D///7vLiL/8P//7u4uIg/wT+/u7i4iD/BE7/7vLiL/AP//vuEvIv8A///u7v/vAADwTwQA8O8AAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "Sprite 2"
     },
     "*": {
         "mimeType": "image/x-mkcd-f4",
