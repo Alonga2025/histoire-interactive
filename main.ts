@@ -17,7 +17,9 @@ function créerpartie () {
         héros = sprites.create(assets.image`Sprite 2`, SpriteKind.Player)
         héros.ay = 200
         controller.moveSprite(héros, 100, 0)
-        controller.moveSprite(héros)
+        if (controller.up.isPressed()) {
+            héros.vy = -100
+        }
         héros.setStayInScreen(true)
         scene.setBackgroundImage(assets.image`Tout commence`)
         game.setDialogFrame(assets.image`Sprite2`)
@@ -27,8 +29,67 @@ function créerpartie () {
         grandpere.setPosition(143, 112)
         game.showLongText("Avance vers lui pour lui parler.", DialogLayout.Top)
     } else if (partie == 2) {
+        if (controller.left.isPressed()) {
+            mySprite = img`
+                . . . . . . . . . . . . . . . . 
+                . . . . . . . . . . . . . . . . 
+                . . . . . . . . . . . . . . . . 
+                . . . . . . . . . . . . . . . . 
+                . . . . . . . . . . . . . . . . 
+                . . . . . . . . . . . . . . . . 
+                . . . . . . . . . . . . . . . . 
+                . . . . . . . . . . . . . . . . 
+                . . . . . . . . . . . . . . . . 
+                . . . . . . . . . . . . . . . . 
+                . . . . . . . . . . . . . . . . 
+                . . . . . . . . . . . . . . . . 
+                . . . . . . . . . . . . . . . . 
+                . . . . . . . . . . . . . . . . 
+                . . . . . . . . . . . . . . . . 
+                . . . . . . . . . . . . . . . . 
+                `
+        } else if (controller.right.isPressed()) {
+            mySprite2 = img`
+                . . . . . . . . . . . . . . . . 
+                . . . . . . . . . . . . . . . . 
+                . . . . . . . . . . . . . . . . 
+                . . . . . . . . . . . . . . . . 
+                . . . . . . . . . . . . . . . . 
+                . . . . . . . . . . . . . . . . 
+                . . . . . . . . . . . . . . . . 
+                . . . . . . . . . . . . . . . . 
+                . . . . . . . . . . . . . . . . 
+                . . . . . . . . . . . . . . . . 
+                . . . . . . . . . . . . . . . . 
+                . . . . . . . . . . . . . . . . 
+                . . . . . . . . . . . . . . . . 
+                . . . . . . . . . . . . . . . . 
+                . . . . . . . . . . . . . . . . 
+                . . . . . . . . . . . . . . . . 
+                `
+        } else if (controller.up.isPressed()) {
+            mySprite5 = img`
+                . . . . . . . . . . . . . . . . 
+                . . . . . . . . . . . . . . . . 
+                . . . . . . . . . . . . . . . . 
+                . . . . . . . . . . . . . . . . 
+                . . . . . . . . . . . . . . . . 
+                . . . . . . . . . . . . . . . . 
+                . . . . . . . . . . . . . . . . 
+                . . . . . . . . . . . . . . . . 
+                . . . . . . . . . . . . . . . . 
+                . . . . . . . . . . . . . . . . 
+                . . . . . . . . . . . . . . . . 
+                . . . . . . . . . . . . . . . . 
+                . . . . . . . . . . . . . . . . 
+                . . . . . . . . . . . . . . . . 
+                . . . . . . . . . . . . . . . . 
+                . . . . . . . . . . . . . . . . 
+                `
+        } else {
+            mySprite4 = assets.image`Sprite 2`
+        }
         héros.ay = 0
-        héros = sprites.create(assets.image`Sprite 2`, SpriteKind.Player)
         controller.moveSprite(héros, 100, 100)
         tiles.setCurrentTilemap(tilemap`niveau`)
         tiles.placeOnTile(héros, tiles.getTileLocation(24, 24))
@@ -38,18 +99,19 @@ function créerpartie () {
         game.showLongText("Pour trouver ton oncle vas vers la droite ET sourtout ne vas pas vers la gauche.", DialogLayout.Bottom)
     }
 }
-controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
-    héros.vy = -100
-})
 function menagepartie () {
     sprites.destroyAllSpritesOfKind(SpriteKind.Papi)
     sprites.destroyAllSpritesOfKind(SpriteKind.Enemy)
     sprites.destroyAllSpritesOfKind(SpriteKind.personnage)
 }
 sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function (sprite, otherSprite) {
-	
+    sprites.destroy(otherSprite)
 })
 let arbre: Sprite = null
+let mySprite4: Image = null
+let mySprite5: Image = null
+let mySprite2: Image = null
+let mySprite: Image = null
 let grandpere: Sprite = null
 let héros: Sprite = null
 let partie = 0
