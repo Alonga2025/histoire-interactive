@@ -5,6 +5,7 @@ namespace SpriteKind {
     export const tronc = SpriteKind.create()
     export const sorciere = SpriteKind.create()
     export const plante = SpriteKind.create()
+    export const rien = SpriteKind.create()
 }
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Papi, function (sprite, otherSprite) {
     game.showLongText("Jeune homme. Je n'ai pas beaucoup de temps pour te parler :", DialogLayout.Top)
@@ -19,6 +20,7 @@ controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
 })
 function créerpartie () {
     if (partie == 1) {
+        héros = sprites.create(assets.image`Héros bas`, SpriteKind.Player)
         controller.moveSprite(héros, 100, 0)
         héros.setPosition(11, 114)
         if (controller.up.isPressed()) {
@@ -29,21 +31,29 @@ function créerpartie () {
         game.setDialogFrame(assets.image`Sprite2`)
         game.showLongText("\"Zack était dans la salle de theatre abandonné.\"", DialogLayout.Top)
         game.showLongText("Quand soudain, des pas se font entendre.", DialogLayout.Top)
+        grandpere = sprites.create(assets.image`Papi`, SpriteKind.Papi)
         grandpere.setPosition(143, 112)
         game.showLongText("Avance vers lui pour lui parler.", DialogLayout.Top)
     } else if (partie == 2) {
         héros.setKind(SpriteKind.Player)
+        arbre = sprites.create(assets.image`Arbre`, SpriteKind.tronc)
+        mySprite = sprites.create(assets.image`sorciere`, SpriteKind.Enemy)
+        coffre = sprites.create(assets.image`Coffre`, SpriteKind.plante)
+        mySprite2 = sprites.create(assets.image`rien`, SpriteKind.rien)
         héros.ay = 0
         controller.moveSprite(héros, 100, 100)
         tiles.setCurrentTilemap(tilemap`niveau`)
         tiles.placeOnTile(héros, tiles.getTileLocation(24, 24))
         scene.cameraFollowSprite(héros)
-        arbre = sprites.create(assets.image`Arbre`, SpriteKind.tronc)
         tiles.placeOnTile(arbre, tiles.getTileLocation(17, 22))
+        tiles.placeOnTile(mySprite2, tiles.getTileLocation(3, 7))
     }
 }
 controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
     héros.setImage(assets.image`Héros haut`)
+})
+sprites.onOverlap(SpriteKind.Player, SpriteKind.rien, function (sprite, otherSprite) {
+    game.showLongText("Tu dois etre Zack, n'est pas? Le neveu de notre cher voisin.", DialogLayout.Bottom)
 })
 controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
     héros.setImage(assets.image`Héros gauche`)
@@ -62,6 +72,7 @@ controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
 sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function (sprite, otherSprite) {
     sprites.destroy(otherSprite)
 })
+let mySprite2: Sprite = null
 let coffre: Sprite = null
 let mySprite: Sprite = null
 let arbre: Sprite = null
@@ -78,8 +89,5 @@ if (controller.A.isPressed()) {
 }
 créerpartie()
 forever(function () {
-    héros = sprites.create(assets.image`Héros bas`, SpriteKind.Player)
-    grandpere = sprites.create(assets.image`Papi`, SpriteKind.Papi)
-    mySprite = sprites.create(assets.image`sorciere`, SpriteKind.Enemy)
-    coffre = sprites.create(assets.image`Coffre`, SpriteKind.plante)
+	
 })
