@@ -26,10 +26,9 @@ function créerpartie () {
         grandpere.setPosition(143, 112)
         game.showLongText("Avance vers lui pour lui parler.", DialogLayout.Top)
     } else if (partie == 2) {
-        let mySprite: Sprite = null
         controller.moveSprite(héros)
         tiles.setCurrentTilemap(tilemap`niveau`)
-        tiles.placeOnTile(mySprite, tiles.getTileLocation(0, 0))
+        tiles.placeOnTile(héros, tiles.getTileLocation(0, 0))
         scene.cameraFollowSprite(héros)
         arbre = sprites.create(assets.image`myImage0`, SpriteKind.tronc)
         tiles.placeOnTile(arbre, tiles.getTileLocation(7, 10))
