@@ -509,7 +509,7 @@ cccccdccccdddcccc...........................................cc...............
 . . . . . f f f f f f . . . . . 
 `;
             case "image2":
-            case "Sprite 2":return img`
+            case "Héros bas":return img`
 . . . . . . . . . . . . . 
 . . . f f f f f . . . . . 
 . . f f f f f 4 f f . . . 
@@ -522,6 +522,63 @@ cccccdccccdddcccc...........................................cc...............
 . . e e e e e e e e . . . 
 . . f f e e e e f f . . . 
 . f f 2 2 2 2 2 2 f f . . 
+. f f 2 2 2 2 2 2 f f . . 
+. e e 2 2 2 2 2 2 e e . . 
+. . . f f f f f f . . . . 
+. . . f f . . f f . . . . 
+`;
+            case "image10":
+            case "Héros droite":return img`
+. . . . . . . . . . . . . 
+. . . . . . . . . . . . . 
+. . . . . . . . . . . . . 
+. . . f f 4 f f f f f . . 
+. . . f 4 f f f 4 f f f f 
+. . 4 4 f f f 4 4 f f 4 f 
+. . f f f f f f f f 4 4 f 
+. . f f e e e e e f f f f 
+. . . . e e f b e e e f f 
+. . . . e e f 1 e e e f . 
+. . . . e e e e e f f f . 
+. . . . 2 2 2 f f f f . . 
+. . . . 2 2 2 f f f f . . 
+. . . f f 2 2 e e f f f . 
+. . . f f f f f f f f f . 
+. . . . f f . . . f f . . 
+`;
+            case "image5":
+            case "Héros gauche":return img`
+. . . . . . . . . . . 
+. . . . . . . . . . . 
+. . . . . . . . . . . 
+. . f f f f f 4 f f . 
+f f f f 4 f f f 4 f . 
+f 4 f f 4 4 f f f 4 4 
+f 4 4 f f f f f f f f 
+f f f f e e e e e f f 
+f f e e e b f e e . . 
+. f e e e 1 f e e . . 
+. f f f e e e e e . . 
+. . f f f f 2 2 2 . . 
+. . f f f f 2 2 2 . . 
+. f f f e e 2 2 f f . 
+. f f f f f f f f f . 
+. . f f . . . f f . . 
+`;
+            case "image6":
+            case "Héros haut":return img`
+. . . . . . . . . . . . . 
+. . . 4 f f f f . . . . . 
+. . f f f f f 4 f f . . . 
+. f f f f f 4 4 f f f . . 
+. f f 4 f f f f f f f . . 
+. 4 4 f f f f f f f 4 . . 
+. . e e e e e e e e 4 . . 
+. . e e e e e e e e . . . 
+. . e e e e e e e e . . . 
+. . e e e e e e e e . . . 
+. . f f f f f f f f . . . 
+. f f f f f f f f f f . . 
 . f f 2 2 2 2 2 2 f f . . 
 . e e 2 2 2 2 2 2 e e . . 
 . . . f f f f f f . . . . 

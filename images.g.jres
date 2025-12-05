@@ -52,7 +52,22 @@
     "image2": {
         "data": "hwQNABAAAAAAAAAAAAAAAADwTwAA8O8AAP9P7u7/7wDw//S+4S8i//D///7vLiL/8P//7u4uIg/wT+/u7i4iD/BE7/7vLiL/AP//vuEvIv8A///u7v/vAADwTwQA8O8AAAAAAAAAAAAAAAAAAAAAAA==",
         "mimeType": "image/x-mkcd-f4",
-        "displayName": "Sprite 2"
+        "displayName": "Héros bas"
+    },
+    "image10": {
+        "data": "hwQNABAAAAAAAAAAAAAAAAAAAAAAAAAAAABA/wAAAAAA8E//AADwDwDw9O/uLvL/AED/7+4uIv8A8P/v/y4iDwDwT+8b/u8PAPBE7+7+7w8A8P//7v///wDw//Tu////AABP9P8P8A8AAP//DwAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "Héros droite"
+    },
+    "image5": {
+        "data": "hwQLABAAAAAAAP//DwAAAAAAT/T/D/APAPD/9O7///8A8P//7v///wDwRO/u/u8PAPBP7xv+7w8A8P/v/y4iDwBA/+/uLiL/APD07+4u8v8A8E//AADwDwAAQP8AAAAA",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "Héros gauche"
+    },
+    "image6": {
+        "data": "hwQNABAAAAAAAAAAAAAAAADwTwAA8O8AAP9P7u7/7wBA//Tu7v8i//D//+7u/yL/8P//7u7/Ig/wT//u7v8iD/BE/+7u/yL/AP//7u7/Iv8A///u7v/vAADwTwQA8O8AAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "Héros haut"
     },
     "*": {
         "mimeType": "image/x-mkcd-f4",

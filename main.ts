@@ -14,7 +14,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Papi, function (sprite, otherSpr
 })
 function créerpartie () {
     if (partie == 1) {
-        héros = sprites.create(assets.image`Sprite 2`, SpriteKind.Player)
+        héros = sprites.create(assets.image`Héros bas`, SpriteKind.Player)
         héros.ay = 200
         controller.moveSprite(héros, 100, 0)
         if (controller.up.isPressed()) {
@@ -29,48 +29,15 @@ function créerpartie () {
         grandpere.setPosition(143, 112)
         game.showLongText("Avance vers lui pour lui parler.", DialogLayout.Top)
     } else if (partie == 2) {
+        héros.setKind(SpriteKind.Player)
         if (controller.left.isPressed()) {
-            héros.setImage(img`
-                . . . . . . . . . . . . . . . . 
-                . . . . . . . . . . . . . . . . 
-                . . . . . . . . . . . . . . . . 
-                . . . . . . . . . . . . . . . . 
-                . . . . . . . . . . . . . . . . 
-                . . . . . . . . . . . . . . . . 
-                . . . . . . . . . . . . . . . . 
-                . . . . . . . . . . . . . . . . 
-                . . . . . . . . . . . . . . . . 
-                . . . . . . . . . . . . . . . . 
-                . . . . . . . . . . . . . . . . 
-                . . . . . . . . . . . . . . . . 
-                . . . . . . . . . . . . . . . . 
-                . . . . . . . . . . . . . . . . 
-                . . . . . . . . . . . . . . . . 
-                . . . . . . . . . . . . . . . . 
-                `)
+            héros.setImage(assets.image`Héros droite`)
         } else if (controller.right.isPressed()) {
-            héros.setImage(img`
-                . . . . . . . . . . . . . . . . 
-                . . . . . . . . . . . . . . . . 
-                . . . . . . . . . . . . . . . . 
-                . . . . . . . . . . . . . . . . 
-                . . . . . . . . . . . . . . . . 
-                . . . . . . . . . . . . . . . . 
-                . . . . . . . . . . . . . . . . 
-                . . . . . . . . . . . . . . . . 
-                . . . . . . . . . . . . . . . . 
-                . . . . . . . . . . . . . . . . 
-                . . . . . . . . . . . . . . . . 
-                . . . . . . . . . . . . . . . . 
-                . . . . . . . . . . . . . . . . 
-                . . . . . . . . . . . . . . . . 
-                . . . . . . . . . . . . . . . . 
-                . . . . . . . . . . . . . . . . 
-                `)
-        } else if (controller.up.isPressed()) {
-            héros.setImage(assets.image`Sprite 2`)
+            héros.setImage(assets.image`Héros gauche`)
+        } else if (controller.down.isPressed()) {
+            héros.setImage(assets.image`Héros bas`)
         } else {
-            héros.setKind(SpriteKind.Player)
+            héros.setImage(assets.image`Héros haut`)
         }
         héros.ay = 0
         controller.moveSprite(héros, 100, 100)
