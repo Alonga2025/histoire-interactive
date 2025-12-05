@@ -14,6 +14,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Papi, function (sprite, otherSpr
 })
 function créerpartie () {
     if (partie == 1) {
+        héros = sprites.create(assets.image`Sprite 2`, SpriteKind.Player)
         héros.ay = 200
         controller.moveSprite(héros, 100, 0)
         controller.moveSprite(héros)
@@ -26,15 +27,15 @@ function créerpartie () {
         grandpere.setPosition(143, 112)
         game.showLongText("Avance vers lui pour lui parler.", DialogLayout.Top)
     } else if (partie == 2) {
-        controller.moveSprite(héros)
+        héros.ay = 0
+        héros = sprites.create(assets.image`Sprite 2`, SpriteKind.Player)
+        controller.moveSprite(héros, 100, 100)
         tiles.setCurrentTilemap(tilemap`niveau`)
-        tiles.placeOnTile(héros, tiles.getTileLocation(0, 0))
+        tiles.placeOnTile(héros, tiles.getTileLocation(24, 24))
         scene.cameraFollowSprite(héros)
         arbre = sprites.create(assets.image`myImage0`, SpriteKind.tronc)
-        tiles.placeOnTile(arbre, tiles.getTileLocation(7, 10))
+        tiles.placeOnTile(arbre, tiles.getTileLocation(17, 21))
         game.showLongText("Pour trouver ton oncle vas vers la droite ET sourtout ne vas pas vers la gauche.", DialogLayout.Bottom)
-    } else {
-    	
     }
 }
 controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
@@ -45,13 +46,15 @@ function menagepartie () {
     sprites.destroyAllSpritesOfKind(SpriteKind.Enemy)
     sprites.destroyAllSpritesOfKind(SpriteKind.personnage)
 }
+sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function (sprite, otherSprite) {
+	
+})
 let arbre: Sprite = null
 let grandpere: Sprite = null
-let partie = 0
 let héros: Sprite = null
-héros = sprites.create(assets.image`Sprite 2`, SpriteKind.Player)
+let partie = 0
 scene.setBackgroundImage(assets.image`Lac`)
-game.showLongText("Cher joueur, ce jeu est un mélange d'action et d'histoire interactive. On espère que tu vas aimer.", DialogLayout.Center)
+game.showLongText("Salut joueur, ce jeu est un mélange d'action et d'histoire interactive. On espère que tu vas aimer.", DialogLayout.Center)
 game.showLongText("Pour bouger, utilise le curseur et pour sauter, appuie sur le bouton du centre", DialogLayout.Center)
 if (controller.A.isPressed()) {
     partie = 1
