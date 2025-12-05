@@ -30,7 +30,7 @@ function créerpartie () {
         game.showLongText("Avance vers lui pour lui parler.", DialogLayout.Top)
     } else if (partie == 2) {
         if (controller.left.isPressed()) {
-            mySprite = img`
+            héros.setImage(img`
                 . . . . . . . . . . . . . . . . 
                 . . . . . . . . . . . . . . . . 
                 . . . . . . . . . . . . . . . . 
@@ -47,9 +47,9 @@ function créerpartie () {
                 . . . . . . . . . . . . . . . . 
                 . . . . . . . . . . . . . . . . 
                 . . . . . . . . . . . . . . . . 
-                `
+                `)
         } else if (controller.right.isPressed()) {
-            mySprite2 = img`
+            héros.setImage(img`
                 . . . . . . . . . . . . . . . . 
                 . . . . . . . . . . . . . . . . 
                 . . . . . . . . . . . . . . . . 
@@ -66,28 +66,11 @@ function créerpartie () {
                 . . . . . . . . . . . . . . . . 
                 . . . . . . . . . . . . . . . . 
                 . . . . . . . . . . . . . . . . 
-                `
+                `)
         } else if (controller.up.isPressed()) {
-            mySprite5 = img`
-                . . . . . . . . . . . . . . . . 
-                . . . . . . . . . . . . . . . . 
-                . . . . . . . . . . . . . . . . 
-                . . . . . . . . . . . . . . . . 
-                . . . . . . . . . . . . . . . . 
-                . . . . . . . . . . . . . . . . 
-                . . . . . . . . . . . . . . . . 
-                . . . . . . . . . . . . . . . . 
-                . . . . . . . . . . . . . . . . 
-                . . . . . . . . . . . . . . . . 
-                . . . . . . . . . . . . . . . . 
-                . . . . . . . . . . . . . . . . 
-                . . . . . . . . . . . . . . . . 
-                . . . . . . . . . . . . . . . . 
-                . . . . . . . . . . . . . . . . 
-                . . . . . . . . . . . . . . . . 
-                `
+            héros.setImage(assets.image`Sprite 2`)
         } else {
-            mySprite4 = assets.image`Sprite 2`
+            héros.setKind(SpriteKind.Player)
         }
         héros.ay = 0
         controller.moveSprite(héros, 100, 100)
@@ -108,10 +91,6 @@ sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function (sprite, oth
     sprites.destroy(otherSprite)
 })
 let arbre: Sprite = null
-let mySprite4: Image = null
-let mySprite5: Image = null
-let mySprite2: Image = null
-let mySprite: Image = null
 let grandpere: Sprite = null
 let héros: Sprite = null
 let partie = 0
