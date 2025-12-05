@@ -145,25 +145,6 @@ c b d d c c b 5 5 5 5 5 5 5 b .
 . . c b d d d d d 5 5 5 b b . . 
 . . . c c c c c c c c b b . . . 
 `;
-            case "jov3{i,Xv%Ky(z(Z[zXK":
-            case "Coffre":return img`
-. . b b b b b b b b b b b b . . 
-. b e 4 4 4 4 4 4 4 4 4 4 e b . 
-b e 4 4 4 4 4 4 4 4 4 4 4 4 e b 
-b e 4 4 4 4 4 4 4 4 4 4 4 4 e b 
-b e 4 4 4 4 4 4 4 4 4 4 4 4 e b 
-b e e 4 4 4 4 4 4 4 4 4 4 e e b 
-b e e e e e e e e e e e e e e b 
-b e e e e e e e e e e e e e e b 
-b b b b b b b d d b b b b b b b 
-c b b b b b b c c b b b b b b c 
-c c c c c c b c c b c c c c c c 
-b e e e e e c b b c e e e e e b 
-b e e e e e e e e e e e e e e b 
-b c e e e e e e e e e e e e c b 
-b b b b b b b b b b b b b b b b 
-. b b . . . . . . . . . . b b . 
-`;
             case "PKXWut":
             case "Papi":return img`
 . . . . . . f f f f . . . . . . 
@@ -403,25 +384,6 @@ ccddcddddccdddccccc................................ccc.....cdc...............
 cccccdccccdddcccc...........................................cc...............
 ....ccc..ccccc...............................................................
 `;
-            case "image3":
-            case "sorciere":return img`
-. . . . . . . c c . . . . . . . 
-. . . . . . . c 5 c . . . . . . 
-. . . . c c c 5 5 5 c c . . . . 
-. . c c b c 5 5 5 5 c c c c . . 
-. c b b 5 b 5 5 5 5 b 5 b b c . 
-. c b 5 5 b b 5 5 b b 5 5 b c . 
-. . f 5 5 5 b b b b 5 5 5 c . . 
-. . f f 5 5 5 5 5 5 5 5 f . . . 
-. . f f e e b f e e e f . . . . 
-. . f f f b 1 f b b e f . . . . 
-. . . f f b b b b b b f . . . . 
-. . . e e f e e e e f . . . . . 
-. . . e b b e b b 5 f . . . . . 
-. . . e b b e 5 5 5 5 f . . . . 
-. . . . e e 5 5 5 5 b c . . . . 
-. . . . . f f f f f f . . . . . 
-`;
             case "image2":
             case "Héros bas":return img`
 . . . . . . . . . . . . . 
@@ -540,6 +502,62 @@ ccc999c9966999999c999cc.
 .........cccccc.........
 ........cccccccc........
 ........cccccccc........
+`;
+            case "image3":
+            case "sorciere":return img`
+. . . . . . . c c . . . . . . . 
+. . . . . . . c 5 c . . . . . . 
+. . . . c c c 5 5 5 c c . . . . 
+. . c c b c 5 5 5 5 c c c c . . 
+. c b b 5 b 5 5 5 5 b 5 b b c . 
+. c b 5 5 b b 5 5 b b 5 5 b c . 
+. . f 5 5 5 b b b b 5 5 5 c . . 
+. . f f 5 5 5 5 5 5 5 5 f . . . 
+. . f f e e b f e e e f . . . . 
+. . f f f b 1 f b b e f . . . . 
+. . . f f b b b b b b f . . . . 
+. . . e e f e e e e f . . . . . 
+. . . e b b e b b 5 f . . . . . 
+. . . e b b e 5 5 5 5 f . . . . 
+. . . . e e 5 5 5 5 b c . . . . 
+. . . . . f f f f f f . . . . . 
+`;
+            case "image7":
+            case "Tronc":return img`
+c c c c c c c c c c c c c c c 
+c c c c c c c c c c c c c c c 
+c c c c c c c c c c c c c c c 
+c c c c c c c c c c c c c c c 
+c c c c c c c c c c c c c c c 
+c c c c c c c c c c c c c c c 
+c c c c c c c c c c c c c c c 
+c c c c c c c c c c c c c c c 
+c c c c c c c c c c c c c c c 
+c c c c c c c c c c c c c c c 
+c c c c c c c c c c c c c c c 
+c c c c c c c c c c c c c c c 
+c c c c c c c c c c c c c c c 
+c c c c c c c c c c c c c c c 
+c c c c c c c c c c c c c c c 
+`;
+            case "jov3{i,Xv%Ky(z(Z[zXK":
+            case "Coffre":return img`
+. b b . . . . . . . . . . b b . 
+b b b b b b b b b b b b b b b b 
+b c e e e e e e e e e e e e c b 
+b e e e e e e e e e e e e e e b 
+b e e e e e c b b c e e e e e b 
+c c c c c c b c c b c c c c c c 
+c b b b b b b c c b b b b b b c 
+b b b b b b b d d b b b b b b b 
+b e e e e e e e e e e e e e e b 
+b e e e e e e e e e e e e e e b 
+b e e 4 4 4 4 4 4 4 4 4 4 e e b 
+b e 4 4 4 4 4 4 4 4 4 4 4 4 e b 
+b e 4 4 4 4 4 4 4 4 4 4 4 4 e b 
+b e 4 4 4 4 4 4 4 4 4 4 4 4 e b 
+. b e 4 4 4 4 4 4 4 4 4 4 e b . 
+. . b b b b b b b b b b b b . . 
 `;
         }
         return null;
