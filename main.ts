@@ -15,7 +15,6 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Papi, function (sprite, otherSpr
 function créerpartie () {
     if (partie == 1) {
         héros = sprites.create(assets.image`Héros bas`, SpriteKind.Player)
-        héros.ay = 200
         controller.moveSprite(héros, 100, 0)
         if (controller.up.isPressed()) {
             héros.vy = -100
@@ -30,22 +29,13 @@ function créerpartie () {
         game.showLongText("Avance vers lui pour lui parler.", DialogLayout.Top)
     } else if (partie == 2) {
         héros.setKind(SpriteKind.Player)
-        if (controller.left.isPressed()) {
-            héros.setImage(assets.image`Héros droite`)
-        } else if (controller.right.isPressed()) {
-            héros.setImage(assets.image`Héros gauche`)
-        } else if (controller.down.isPressed()) {
-            héros.setImage(assets.image`Héros bas`)
-        } else {
-            héros.setImage(assets.image`Héros haut`)
-        }
         héros.ay = 0
         controller.moveSprite(héros, 100, 100)
         tiles.setCurrentTilemap(tilemap`niveau`)
         tiles.placeOnTile(héros, tiles.getTileLocation(24, 24))
         scene.cameraFollowSprite(héros)
-        arbre = sprites.create(assets.image`myImage0`, SpriteKind.tronc)
-        tiles.placeOnTile(arbre, tiles.getTileLocation(17, 21))
+        arbre = sprites.create(assets.image`Arbre`, SpriteKind.tronc)
+        tiles.placeOnTile(arbre, tiles.getTileLocation(21, 17))
         game.showLongText("Pour trouver ton oncle vas vers la droite ET sourtout ne vas pas vers la gauche.", DialogLayout.Bottom)
     }
 }
@@ -63,11 +53,22 @@ let héros: Sprite = null
 let partie = 0
 scene.setBackgroundImage(assets.image`Lac`)
 game.showLongText("Salut joueur, ce jeu est un mélange d'action et d'histoire interactive. On espère que tu vas aimer.", DialogLayout.Center)
-game.showLongText("Pour bouger, utilise le curseur et pour sauter, appuie sur le bouton du centre", DialogLayout.Center)
+game.showLongText("Pour bouger, utilise le curseur. ", DialogLayout.Center)
 if (controller.A.isPressed()) {
     partie = 1
 }
 créerpartie()
 forever(function () {
 	
+})
+forever(function () {
+    if (controller.left.isPressed()) {
+        héros.setImage(assets.image`Héros droite`)
+    } else if (controller.right.isPressed()) {
+        héros.setImage(assets.image`Héros gauche`)
+    } else if (controller.up.isPressed()) {
+        héros.setImage(assets.image`Héros haut`)
+    } else {
+        héros.setImage(assets.image`Héros bas`)
+    }
 })
