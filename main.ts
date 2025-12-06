@@ -53,7 +53,10 @@ controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
     héros.setImage(assets.image`Héros haut`)
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.rien, function (sprite, otherSprite) {
-    game.showLongText("Tu dois etre Zack, n'est pas? Le neveu de notre cher voisin.", DialogLayout.Bottom)
+    game.showLongText("Tu dois etre Zack, n'est pas? Le neveu de notre cher voisin.", DialogLayout.Top)
+    game.showLongText("VOisin ?! Mais cette sorciere ... elle prarle de son oncle!!!!!!!!!!!!!!!", DialogLayout.Top)
+    game.showLongText("Malhereusement pour toi il n y a qu'un remede pour l'aider et il est introuvable... quel domage!", DialogLayout.Bottom)
+    game.showLongText("Elle y est pour quelque chose", DialogLayout.Bottom)
 })
 controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
     héros.setImage(assets.image`Héros gauche`)
