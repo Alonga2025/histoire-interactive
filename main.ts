@@ -10,113 +10,20 @@ namespace SpriteKind {
     export const magicien = SpriteKind.create()
     export const écriture = SpriteKind.create()
     export const instructions = SpriteKind.create()
+    export const parle = SpriteKind.create()
 }
-sprites.onOverlap(SpriteKind.Player, SpriteKind.instructions, function () {
-    game.setDialogFrame(img`
-        4 e e e e e e e e e e e e e 4 
-        4 4 e e e 4 e e e e e e 4 e e 
-        e e e e 4 e 4 e e e e e e 4 e 
-        e e e e e 4 e e e e e e e e e 
-        e e e e e e e e e e 4 e e e e 
-        e e e e e e e e e e e e 4 e e 
-        e e e e e e e e e e e e e e e 
-        e 4 e 4 e e e e e e e e e e e 
-        e e 4 e e e e e e e e e e e e 
-        e e e e e e e e e e e e e e e 
-        e e e e e e e e 4 e e e e e e 
-        e e e e e e e e e e e e e e e 
-        e e e e e e e 4 e e e e e e e 
-        e 4 e e e e e e e e e e e 4 e 
-        e e 4 e e e e e e e e e e e 4 
-        `)
-    game.showLongText("Ce n'est pas la bonne plante! C'était un piege et la sorciere n'était qu'un pion! La vraie plante se trouve tout droit jausqu'a la fin de la foret a droite.", DialogLayout.Top)
-})
-sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function () {
-    let otherSprite4: Sprite = null
-    sprites.destroy(otherSprite4)
-    sprites.destroy(bombe)
-})
-sprites.onOverlap(SpriteKind.Player, SpriteKind.rien, function () {
-    game.setDialogCursor(img`
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
-        `)
-    game.showLongText("Zack! C'est bien toi? Tu est venu rendre visite au voisin?", DialogLayout.Top)
-    game.setDialogCursor(img`
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        `)
-    game.showLongText("VOISIN ?! Cette sorciere palrait de son coisin.", DialogLayout.Top)
-    game.setDialogCursor(img`
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
-        `)
-    game.showLongText("Je pense que tu as déja remarqué que celui ci est assez malade. ", DialogLayout.Top)
-    game.showLongText("Malhereusement il n y a aucune plante pour le guérir et elle est introuvable...", DialogLayout.Top)
-    game.showLongText("Je vois que tu n'Est pas tres bavard ... Venez mes petits animaux, le diner est pret!", DialogLayout.Top)
-    Appel_les_monstres()
-    game.setDialogCursor(img`
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-        `)
-    game.showLongText("Les monstres ont rempli la salle et tu dois tous les tuer si tu veux que la soriere parte et si tu veux savoir ce qu'il se trouve dans le couloir de au fond a gauche de la salle.", DialogLayout.Top)
-    game.showLongText("Fais attention! Chaque fois que tu touche les monstres tu perds une vie. Le bouton B pourrait t'etre utile.", DialogLayout.Top)
+sprites.onOverlap(SpriteKind.Player, SpriteKind.magicien, function (sprite, otherSprite) {
+    if (plantesramasées == 1) {
+        créerpartie()
+    } else if (mauvaiseplanteramasée == 0) {
+        game.setDialogFrame(assets.image`Sprite2`)
+        game.showLongText("Oh non! Tu vie s de t'approcher de ton cousin sans la plante médicale! Tu as attrapé son sort et maintenant vous etez tout les deux coincées dans la foret.", DialogLayout.Top)
+        game.gameOver(false)
+    } else {
+        game.setDialogFrame(assets.image`Sprite2`)
+        game.showLongText("Oh non! Tu vie s de t'approcher de ton cousin sans la plante médicale! Tu as attrapé son sort et maintenant vous etez tout les deux coincées dans la foret.", DialogLayout.Top)
+        game.gameOver(false)
+    }
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Papi, function (sprite, otherSprite) {
     game.setDialogFrame(img`
@@ -185,14 +92,6 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Papi, function (sprite, otherSpr
     partie = 2
     créerpartie()
 })
-sprites.onOverlap(SpriteKind.Player, SpriteKind.plante, function () {
-    game.showLongText("Va donner la plante a ton cousin.", DialogLayout.Bottom)
-    plantesramasées = 1
-    bonne_plante.setFlag(SpriteFlag.RelativeToCamera, true)
-    bonne_plante.left = 70
-    bonne_plante.left = 117
-    bonne_plante.z = 50
-})
 function Appel_les_monstres () {
     serpent_1 = sprites.create(assets.image`serpent 1`, SpriteKind.Enemy)
     tiles.placeOnTile(serpent_1, tiles.getTileLocation(0, 11))
@@ -213,52 +112,6 @@ function Appel_les_monstres () {
     dragon_3 = sprites.create(assets.image`Dragon 3`, SpriteKind.Enemy)
     tiles.placeOnTile(dragon_3, tiles.getTileLocation(0, 4))
 }
-sprites.onOverlap(SpriteKind.Player, SpriteKind.rien, function () {
-    game.setDialogCursor(assets.image`Field blanc`)
-    game.showLongText("Cousin? C'Est bien toi?", DialogLayout.Top)
-    game.setDialogCursor(img`
-        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
-        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
-        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
-        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
-        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
-        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
-        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
-        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
-        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
-        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
-        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
-        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
-        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
-        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
-        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
-        `)
-    game.showLongText("ATTANDS! Ne t'aproche pas de moi!", DialogLayout.Top)
-    game.showLongText("Je suis ensorcelé ca ne se voit pas? Tu ne peux venir vers moi QUE si tu as la plante médicinale, sinon vas attraper mon sort.", DialogLayout.Top)
-    game.showLongText("En tout cas la plante ne se trouve pas a droite elle se trouve a ...", DialogLayout.Top)
-    game.setDialogCursor(assets.image`Field blanc`)
-    game.showLongText("Avant de me dire tout ca, comment est ce que tu t'Est retrouvé ici? Pourquoi tu nous a abbandoné moi et maman il y a trois mois, pourquoi ...", DialogLayout.Top)
-    game.setDialogCursor(img`
-        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
-        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
-        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
-        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
-        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
-        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
-        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
-        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
-        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
-        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
-        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
-        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
-        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
-        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
-        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
-        `)
-    game.showLongText("Écoute frérot j'ai peut de temps. Va chercher l'herbe avant qu'il ne soit trop tard...", DialogLayout.Top)
-    game.setDialogCursor(assets.image`Field blanc`)
-    game.showLongText("Il faut aller chercher l'herbe médicinale ... si vous vous souvenez du seul indice qu'Abriel vous a dit.", DialogLayout.Top)
-})
 controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
     héros.setImage(assets.image`Héros bas`)
     direction = "bas"
@@ -307,7 +160,7 @@ function créerpartie () {
         arbre = sprites.create(assets.image`Arbre`, SpriteKind.tronc)
         Enemypublicn1 = sprites.create(assets.image`sorciere`, SpriteKind.sorciere)
         blabla = sprites.create(assets.image`rien`, SpriteKind.rien)
-        blabla2 = sprites.create(assets.image`myImage`, SpriteKind.rien)
+        blabla2 = sprites.create(assets.image`myImage`, SpriteKind.parle)
         cousin = sprites.create(assets.image`Cousin malade`, SpriteKind.magicien)
         mauvaise_plante = sprites.create(assets.image`mauvaise plante`, SpriteKind.plante)
         pancarte = sprites.create(assets.image`Pencarte`, SpriteKind.instructions)
@@ -319,6 +172,7 @@ function créerpartie () {
         textSprite = textsprite.create("Inventaire :")
         tiles.placeOnTile(arbre, tiles.getTileLocation(17, 20))
         tiles.placeOnTile(blabla, tiles.getTileLocation(3, 7))
+        tiles.placeOnTile(blabla2, tiles.getTileLocation(28, 14))
         tiles.placeOnTile(Enemypublicn1, tiles.getTileLocation(0, 7))
         textSprite.setFlag(SpriteFlag.RelativeToCamera, true)
         textSprite.left = 5
@@ -477,19 +331,6 @@ function créerpartie () {
         game.showLongText("Cherche a la droite de la foret. On se retrouve la bas fréro", DialogLayout.Top)
     }
 }
-sprites.onOverlap(SpriteKind.Player, SpriteKind.magicien, function () {
-    if (plantesramasées == 1) {
-        créerpartie()
-    } else if (mauvaiseplanteramasée == 0) {
-        game.setDialogFrame(assets.image`Sprite2`)
-        game.showLongText("Oh non! Tu vie s de t'approcher de ton cousin sans la plante médicale! Tu as attrapé son sort et maintenant vous etez tout les deux coincées dans la foret.", DialogLayout.Top)
-        game.gameOver(false)
-    } else {
-        game.setDialogFrame(assets.image`Sprite2`)
-        game.showLongText("Oh non! Tu vie s de t'approcher de ton cousin sans la plante médicale! Tu as attrapé son sort et maintenant vous etez tout les deux coincées dans la foret.", DialogLayout.Top)
-        game.gameOver(false)
-    }
-})
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite2, otherSprite2) {
     info.changeLifeBy(-1)
 })
@@ -497,13 +338,92 @@ controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
     héros.setImage(assets.image`Héros haut`)
     direction = "haut"
 })
-controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
-    héros.setImage(assets.image`Héros gauche`)
-    direction = "droite"
+sprites.onOverlap(SpriteKind.Player, SpriteKind.rien, function (sprite, otherSprite) {
+    game.setDialogCursor(img`
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+        `)
+    game.showLongText("Zack! C'est bien toi? Tu est venu rendre visite au voisin?", DialogLayout.Top)
+    game.setDialogCursor(img`
+        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+        `)
+    game.showLongText("VOISIN ?! Cette sorciere palrait de son coisin.", DialogLayout.Top)
+    game.setDialogCursor(img`
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+        `)
+    game.showLongText("Je pense que tu as déja remarqué que celui ci est assez malade. ", DialogLayout.Top)
+    game.showLongText("Malhereusement il n y a aucune plante pour le guérir et elle est introuvable...", DialogLayout.Top)
+    game.showLongText("Je vois que tu n'Est pas tres bavard ... Venez mes petits animaux, le diner est pret!", DialogLayout.Top)
+    Appel_les_monstres()
+    game.setDialogCursor(img`
+        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+        1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+        `)
+    game.showLongText("Les monstres ont rempli la salle et tu dois tous les tuer si tu veux que la soriere parte et si tu veux savoir ce qu'il se trouve dans le couloir de au fond a gauche de la salle.", DialogLayout.Top)
+    game.showLongText("Fais attention! Chaque fois que tu touche les monstres tu perds une vie. Le bouton B pourrait t'etre utile.", DialogLayout.Top)
+    sprites.destroy(blabla)
 })
-sprites.onOverlap(SpriteKind.Player, SpriteKind.coffre, function (sprite, otherSprite) {
+sprites.onOverlap(SpriteKind.Player, SpriteKind.coffre, function (sprite3, otherSprite3) {
     game.setDialogFrame(assets.image`Sprite2`)
-    game.showLongText("Voila c'est la fin.", DialogLayout.Bottom)
+    game.showLongText("Voila c'est la fin.", DialogLayout.Top)
     game.setDialogFrame(img`
         9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
         9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
@@ -521,12 +441,63 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.coffre, function (sprite, otherS
         9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
         9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
         `)
-    game.showLongText("Un peu de patience fréro on n'as meme pas prevenue maman.", DialogLayout.Bottom)
+    game.showLongText("Un peu de patience fréro on n'as meme pas prevenue maman.", DialogLayout.Top)
     game.setDialogFrame(assets.image`Sprite2`)
-    game.showLongText("Partons a l'aventure!", DialogLayout.Bottom)
+    game.showLongText("Partons a l'aventure!", DialogLayout.Top)
     game.gameOver(true)
 })
-sprites.onOverlap(SpriteKind.Player, SpriteKind.Player, function () {
+sprites.onOverlap(SpriteKind.Player, SpriteKind.parle, function (sprite, otherSprite) {
+    game.setDialogCursor(assets.image`Field blanc`)
+    game.showLongText("Cousin? C'Est bien toi?", DialogLayout.Top)
+    game.setDialogCursor(img`
+        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+        `)
+    game.showLongText("ATTANDS! Ne t'aproche pas de moi!", DialogLayout.Top)
+    game.showLongText("Je suis ensorcelé ca ne se voit pas? Tu ne peux venir vers moi QUE si tu as la plante médicinale, sinon vas attraper mon sort.", DialogLayout.Top)
+    game.showLongText("En tout cas la plante ne se trouve pas a droite elle se trouve a ...", DialogLayout.Top)
+    game.setDialogCursor(assets.image`Field blanc`)
+    game.showLongText("Avant de me dire tout ca, comment est ce que tu t'Est retrouvé ici? Pourquoi tu nous a abbandoné moi et maman il y a trois mois, pourquoi ...", DialogLayout.Top)
+    game.setDialogCursor(img`
+        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+        `)
+    game.showLongText("Écoute frérot j'ai peut de temps. Va chercher l'herbe avant qu'il ne soit trop tard...", DialogLayout.Top)
+    game.setDialogCursor(assets.image`Field blanc`)
+    game.showLongText("Il faut aller chercher l'herbe médicinale ... si vous vous souvenez du seul indice qu'Abriel vous a dit.", DialogLayout.Top)
+    sprites.destroy(blabla2)
+})
+controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
+    héros.setImage(assets.image`Héros gauche`)
+    direction = "droite"
+})
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Player, function (sprite, otherSprite) {
     game.showLongText("Approche toi de la pencarte pour voir ce qu'elle dit ou va directement donner la plante a ton cousin.", DialogLayout.Top)
     mauvaiseplanteramasée = 1
     mauvaise_plante.setFlag(SpriteFlag.RelativeToCamera, true)
@@ -534,17 +505,50 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Player, function () {
     mauvaise_plante.left = 117
     mauvaise_plante.z = 50
 })
-controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
-    héros.setImage(assets.image`Héros droite`)
-    direction = "gauche"
+sprites.onOverlap(SpriteKind.Player, SpriteKind.plante, function (sprite, otherSprite) {
+    game.showLongText("Va donner la plante a ton cousin.", DialogLayout.Bottom)
+    plantesramasées = 1
+    bonne_plante.setFlag(SpriteFlag.RelativeToCamera, true)
+    bonne_plante.left = 70
+    bonne_plante.left = 117
+    bonne_plante.z = 50
 })
-sprites.onOverlap(SpriteKind.Player, SpriteKind.tronc, function () {
+sprites.onOverlap(SpriteKind.Player, SpriteKind.tronc, function (sprite, otherSprite) {
     game.setDialogFrame(assets.image`Tronc`)
     game.showLongText("Tu est finalement arrivé? ", DialogLayout.Full)
     game.showLongText("Il faut chercher ton oncle dans la fotret (un vrai labyrinthe.)", DialogLayout.Full)
     game.showLongText("Dans cette  foret tu trouveras peut etre des amis, mais les ennemis ne sont pas loin.", DialogLayout.Full)
     game.showLongText("EN gros évite la gauche", DialogLayout.Full)
     sprites.destroy(arbre)
+})
+sprites.onOverlap(SpriteKind.Player, SpriteKind.instructions, function (sprite, otherSprite) {
+    game.setDialogFrame(img`
+        4 e e e e e e e e e e e e e 4 
+        4 4 e e e 4 e e e e e e 4 e e 
+        e e e e 4 e 4 e e e e e e 4 e 
+        e e e e e 4 e e e e e e e e e 
+        e e e e e e e e e e 4 e e e e 
+        e e e e e e e e e e e e 4 e e 
+        e e e e e e e e e e e e e e e 
+        e 4 e 4 e e e e e e e e e e e 
+        e e 4 e e e e e e e e e e e e 
+        e e e e e e e e e e e e e e e 
+        e e e e e e e e 4 e e e e e e 
+        e e e e e e e e e e e e e e e 
+        e e e e e e e 4 e e e e e e e 
+        e 4 e e e e e e e e e e e 4 e 
+        e e 4 e e e e e e e e e e e 4 
+        `)
+    game.showLongText("Ce n'est pas la bonne plante! C'était un piege et la sorciere n'était qu'un pion! La vraie plante se trouve tout droit jausqu'a la fin de la foret a droite.", DialogLayout.Top)
+})
+controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
+    héros.setImage(assets.image`Héros droite`)
+    direction = "gauche"
+})
+sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function (sprite, otherSprite) {
+    let otherSprite4: Sprite = null
+    sprites.destroy(otherSprite4)
+    sprites.destroy(bombe)
 })
 let projectile3: Sprite = null
 let projectile2: Sprite = null
@@ -553,14 +557,18 @@ let mySprite: Sprite = null
 let coffre2: Sprite = null
 let fond: Sprite = null
 let textSprite: TextSprite = null
+let bonne_plante: Sprite = null
+let pancarte: Sprite = null
 let mauvaise_plante: Sprite = null
 let cousin: Sprite = null
+let blabla2: Sprite = null
+let blabla: Sprite = null
 let Enemypublicn1: Sprite = null
 let arbre: Sprite = null
-let mauvaiseplanteramasée = 0
+let bombe: Sprite = null
 let grandpere: Sprite = null
 let direction = ""
-let blabla2: Sprite = null
+let héros: Sprite = null
 let dragon_3: Sprite = null
 let dragon_2: Sprite = null
 let dragon_1: Sprite = null
@@ -570,13 +578,9 @@ let crane_1: Sprite = null
 let serpent_3: Sprite = null
 let serpent_2: Sprite = null
 let serpent_1: Sprite = null
+let mauvaiseplanteramasée = 0
 let plantesramasées = 0
-let bonne_plante: Sprite = null
-let bombe: Sprite = null
-let pancarte: Sprite = null
-let héros: Sprite = null
 let partie = 0
-let blabla : Sprite = null
 scene.setBackgroundImage(assets.image`Lac`)
 game.showLongText("Salut joueur, ce jeu est un mélange d'action et d'histoire interactive. ", DialogLayout.Center)
 game.showLongText("Pour bouger, utilise le curseur. ", DialogLayout.Center)
