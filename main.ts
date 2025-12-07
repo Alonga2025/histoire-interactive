@@ -8,6 +8,7 @@ namespace SpriteKind {
     export const rien = SpriteKind.create()
     export const coffre = SpriteKind.create()
     export const magicien = SpriteKind.create()
+    export const écriture = SpriteKind.create()
 }
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Papi, function (sprite, otherSprite) {
     game.setDialogFrame(img`
@@ -202,6 +203,49 @@ function créerpartie () {
         blabla = sprites.create(assets.image`rien`, SpriteKind.rien)
         blabla2 = sprites.create(assets.image`myImage`, SpriteKind.Player)
         cousin = sprites.create(assets.image`Cousin malade`, SpriteKind.Player)
+        textSprite = textsprite.create("Inventaire :")
+        textSprite.setFlag(SpriteFlag.RelativeToCamera, true)
+        textSprite.left = 5
+        textSprite.bottom = 117
+        textSprite.setIcon(img`
+            f 
+            f 
+            f 
+            f 
+            f 
+            f 
+            f 
+            f 
+            f 
+            f 
+            f 
+            f 
+            f 
+            f 
+            f 
+            f 
+            `)
+        fond = sprites.create(img`
+            ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+            ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+            ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+            ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+            ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+            ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+            ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+            ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+            ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+            ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+            ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+            ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+            ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+            ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+            ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+            ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+            `, SpriteKind.écriture)
+        fond.setFlag(SpriteFlag.RelativeToCamera, true)
+        fond.left = 5
+        fond.bottom = 117
         if (SpriteKind.Enemy == 0) {
             sprites.destroy(Enemypublicn1)
         }
@@ -409,6 +453,8 @@ sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function (sprite, oth
     sprites.destroy(bombe)
 })
 let coffre2: Sprite = null
+let fond: Sprite = null
+let textSprite: TextSprite = null
 let cousin: Sprite = null
 let blabla: Sprite = null
 let Enemypublicn1: Sprite = null
