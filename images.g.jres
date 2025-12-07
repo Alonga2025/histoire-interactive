@@ -79,6 +79,26 @@
         "mimeType": "image/x-mkcd-f4",
         "displayName": "rien"
     },
+    "image13": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "myImage"
+    },
+    "KaKK(0et/Vy9u:950x*f": {
+        "data": "hwQPAA8AAAARERERERERAREREREREREBEREREREREQERERERERERAREREREREREBEREREREREQERERERERERAREREREREREBEREREREREQERERERERERAREREREREREBEREREREREQERERERERERAREREREREREBEREREREREQE=",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "Field blanc"
+    },
+    "image14": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "myImage0"
+    },
+    "image15": {
+        "data": "hwQOABAAAAAAAP//AAAAAAD/VVUPAMAMAF9Vvf/MvMPwVbVE1E25y/BV1UTUTbnD8FVVS8xNubvAVVXFG+2+s8BVVcXs3u3DwFVVVbve7cMAX1VVtUu+ywBfVVW1u7wMAPBVVbW7zAAAAFxVu8sAAAAAwP/PDAAA",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "Oncle"
+    },
     "*": {
         "mimeType": "image/x-mkcd-f4",
         "dataEncoding": "base64",

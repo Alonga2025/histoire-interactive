@@ -53,23 +53,7 @@ function créerpartie () {
         game.showLongText("Écoute moi bien, il faut absolument que tu ailles dans la foret, prends cette potion et garde la précieusement, tu ne l'utiliseras que si tu est en danger pour te défendre.", DialogLayout.Top)
         game.showLongText("Quand tu arriveras dans la foret ÉVITE d'aller le coté gauche avant d'avoir trouv ton oncle. ", DialogLayout.Top)
         game.showLongText("Zack ... Il est important que tu le retrouves, il est notre seul espoir.", DialogLayout.Top)
-        game.setDialogFrame(img`
-            1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-            1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-            1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-            1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-            1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-            1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-            1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-            1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-            1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-            1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-            1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-            1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-            1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-            1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-            1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-            `)
+        game.setDialogFrame(assets.image`Field blanc`)
         game.showLongText("Et ces instrictions ne fesaient que de le rendre plus perplexe. ", DialogLayout.Top)
         game.showLongText("Le son de pas venant dans sa direction le sortirent de sa reflexion.", DialogLayout.Top)
         grandpere = sprites.create(assets.image`Papi`, SpriteKind.Papi)
