@@ -69,11 +69,6 @@
         "mimeType": "image/x-mkcd-f4",
         "displayName": "sorciere"
     },
-    "image15": {
-        "data": "hwQNAA4AAAALAACwAAAAAHBPvwALCwsA8P//AAAAAAD093/uFxH/APT/734eEf8A///vzB4RHwD/9+8bFxEfAP9P7/5/fv8A/////+/n/wD3///3DwALAPR///8PAAAAsP///wsLsAAL/09LAAALAA==",
-        "mimeType": "image/x-mkcd-f4",
-        "displayName": "Cousin malade"
-    },
     "{dD{0zueR-bAr%ZO-z3a": {
         "data": "hwQPAA8AAAC7u7u7u7u7C7u7u7u7u7sLu7u7u7u7uwu7u7u7u7u7C7u7u7u7u7sLu7u7u7u7uwu7u7u7u7u7C7u7u7u7u7sLu7u7u7u7uwu7u7u7u7u7C7u7u7u7u7sLu7u7u7u7uwu7u7u7u7u7C7u7u7u7u7sLu7u7u7u7uws=",
         "mimeType": "image/x-mkcd-f4",
@@ -134,11 +129,6 @@
         "mimeType": "image/x-mkcd-f4",
         "displayName": "Cousin en magicien0"
     },
-    "image18": {
-        "data": "hwQNAA4AAAAAAAAAAAAAAACfDwAAAAAA8P//AAAAAAD5/2bmbmaRAPn/ZuZuZpEA//9v/25mYQD/+W8bbmZhAP+fb/bv7pEA/////+/ukQD/////DwAAAPn///8PAAAAAP///wkAAAAA/5+ZAAAAAA==",
-        "mimeType": "image/x-mkcd-f4",
-        "displayName": "Cousin en magicien"
-    },
     "image14": {
         "data": "hwQNAA4AAAAA/09EAAAAAAD///8EAAAA9P///w8AAAD/////DwAAAP/////v7v8A/0/v/u/u/wD/9O8bHhEfAP//7/8eER8A9P/v7h4R/wD0/+/uHhH/APD//wAAAAAA8E8PAAAAAAAAAAAAAAAAAA==",
         "mimeType": "image/x-mkcd-f4",
@@ -179,25 +169,30 @@
         "mimeType": "image/x-mkcd-f4",
         "displayName": "Coffre"
     },
-    "image29": {
-        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-        "mimeType": "image/x-mkcd-f4",
-        "displayName": "myImage"
-    },
-    "image30": {
-        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-        "mimeType": "image/x-mkcd-f4",
-        "displayName": "myImage0"
-    },
     "image34": {
         "data": "hwQQABAAAAAAAACAmAAAAAAAAIBnCQAAAAAAAHiXAACAiIiJaHeIiIB3hpiIdndmAGh3d2dmhogAgIh2d3d3ZgAAgIhohohpAJCIdnd3ZmYAmXd3mWZmZoh3d4aYd4eZiIiIiHdniIkAAABoZ4hmZgAAAHiGeIeIAAAAiYh3CAAAAAAAiYgAAA==",
         "mimeType": "image/x-mkcd-f4",
         "displayName": "plante"
     },
+    "image18": {
+        "data": "hwQNAA4AAAAAAAAAAAAAAACfDwAAAAAA8P//AAAAAAD5/2bmbmaRAPn/ZuZuZpEA//9v/25mYQD/+W8bbmZhAP+fb/bv7pEA/////+/ukQD/////DwAAAPn///8PAAAAAP///wkAAAAA/5+ZAAAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "Cousin en magicien"
+    },
     "image33": {
-        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgIgIAAAAAAFJVJQIAAAAAVVVVRCIAAABVVVVVREQAAFVVVVVVVQAAVVVVJCJEAABSVUUkAAAAACAiAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAVAQAAAAAAABUBAAAAAAAAFIkAAAAAAAAUiQAAAAAACBSRQAAAAAAQFRFAgAAAABAVVUCAAAAAFJVVSUAAAAAUlVVJQAAAABSVVUlAAAAAFJVVSUAAAAAIFVVAgAAAAAAAAAAAAAAAAAAAAAAAA==",
         "mimeType": "image/x-mkcd-f4",
         "displayName": "Projectile"
+    },
+    "image15": {
+        "data": "hwQNAA4AAAALAACwAAAAAHBPvwALCwsA8P//AAAAAAD093/uFxH/APT/734eEf8A///vzB4RHwD/9+8bFxEfAP9P7/5/fv8A/////+/n/wD3///3DwALAPR///8PAAAAsP///wsLsAAL/09LAAALAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "Cousin malade"
+    },
+    "image29": {
+        "data": "hwQQABAAAAAHAAAAAAAAcHAAAAAAAAAHAAcAAAAAcAAAcAAAAAAHAAAABwAAcAAAAABwAAAHAAAAAAAHcAAAAAAAAHAHAAAAAAAAcAcAAAAAAAAHcAAAAAAAcAAABwAAAAAHAABwAAAAcAAAAAAHAAAHAAAAAHAAcAAAAAAAAAcHAAAAAAAAcA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "myImage"
     },
     "*": {
         "mimeType": "image/x-mkcd-f4",
