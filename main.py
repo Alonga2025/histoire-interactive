@@ -7,6 +7,7 @@ class SpriteKind:
     sorciere = SpriteKind.create()
     plante = SpriteKind.create()
     rien = SpriteKind.create()
+    coffre = SpriteKind.create()
 
 def on_on_overlap(sprite):
     global partie
@@ -22,61 +23,9 @@ def on_on_overlap(sprite):
 sprites.on_overlap(SpriteKind.player, SpriteKind.Papi, on_on_overlap)
 
 def on_on_overlap2():
-    sprites.destroy(otherSprite)
+    sprites.destroy(otherSprite2)
     sprites.destroy(bombe)
 sprites.on_overlap(SpriteKind.projectile, SpriteKind.enemy, on_on_overlap2)
-
-def on_on_overlap3():
-    game.set_dialog_frame(img("""
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7
-        """))
-    game.show_long_text("Tu dois etre Zack, n'est pas? Le neveu de notre cher voisin.",
-        DialogLayout.TOP)
-    game.show_long_text("VOisin ?! Mais cette sorciere ... elle prarle de son oncle!!!!!!!!!!!!!!!",
-        DialogLayout.TOP)
-    game.show_long_text("Malhereusement pour toi il n y a qu'un remede pour l'aider et il est introuvable... quel domage!",
-        DialogLayout.TOP)
-    game.set_dialog_frame(assets.image("""
-        Sprite2
-        """))
-    game.show_long_text("Elle y est pour quelque chose. Ne peut s'empecher de penser Zack",
-        DialogLayout.TOP)
-    game.set_dialog_frame(img("""
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7
-        """))
-    game.show_long_text("Bon. Puisque je vois que tu n'est pas trés bavard ... MONSTRES!!!!!!!!!!!!!!!!!",
-        DialogLayout.TOP)
-    sprites.destroy(blabla)
-    Appel_les_monstres()
-sprites.on_overlap(SpriteKind.player, SpriteKind.rien, on_on_overlap3)
 
 def on_down_pressed():
     héros.set_image(assets.image("""
@@ -85,7 +34,7 @@ def on_down_pressed():
 controller.down.on_event(ControllerButtonEvent.PRESSED, on_down_pressed)
 
 def créerpartie():
-    global héros, grandpere, arbre, Enemypublicn1, coffre, blabla
+    global héros, grandpere, arbre, Enemypublicn1, coffre2, blabla, blabla2
     if partie == 1:
         héros = sprites.create(assets.image("""
             Héros bas
@@ -139,12 +88,31 @@ def créerpartie():
         Enemypublicn1 = sprites.create(assets.image("""
             sorciere
             """), SpriteKind.sorciere)
-        coffre = sprites.create(assets.image("""
+        coffre2 = sprites.create(assets.image("""
             Coffre
-            """), SpriteKind.plante)
+            """), SpriteKind.coffre)
         blabla = sprites.create(assets.image("""
             rien
             """), SpriteKind.rien)
+        blabla2 = sprites.create(img("""
+                c . . . . . . . . . . . . . . c
+                . c . . . . . . . . . . . . c .
+                . . c . . . . . . . . . . c . .
+                . . . c . . . . . . . . c . . .
+                . . . . c . . . . . . c . . . .
+                . . . . . c . . . . c . . . . .
+                . . . . . . c . . c . . . . . .
+                . . . . . . . c . . . . . . . .
+                . . . . . . . . c . . . . . . .
+                . . . . . . c . . c . . . . . .
+                . . . . . c . . . . c . . . . .
+                . . . . c . . . . . . c . . . .
+                . . . c . . . . . . . . c . . .
+                . . c . . . . . . . . . . c . .
+                . c . . . . . . . . . . . . c .
+                c . . . . . . . . . . . . . . c
+                """),
+            SpriteKind.rien)
         héros.ay = 0
         controller.move_sprite(héros, 100, 100)
         tiles.set_current_tilemap(tilemap("""
@@ -154,6 +122,11 @@ def créerpartie():
         scene.camera_follow_sprite(héros)
         tiles.place_on_tile(arbre, tiles.get_tile_location(17, 20))
         tiles.place_on_tile(blabla, tiles.get_tile_location(3, 7))
+        tiles.place_on_tile(blabla2, tiles.get_tile_location(3, 8))
+        tiles.place_on_tile(coffre2, tiles.get_tile_location(29, 5))
+        tiles.place_on_tile(Enemypublicn1, tiles.get_tile_location(0, 0))
+    else:
+        pass
 
 def on_up_pressed():
     héros.set_image(assets.image("""
@@ -172,30 +145,111 @@ def Appel_les_monstres():
     serpent_1 = sprites.create(assets.image("""
         serpent 1
         """), SpriteKind.enemy)
+    tiles.place_on_tile(serpent_1, tiles.get_tile_location(0, 11))
     serpent_2 = sprites.create(assets.image("""
         serpent 2
         """), SpriteKind.enemy)
+    tiles.place_on_tile(serpent_2, tiles.get_tile_location(2, 11))
     serpent_3 = sprites.create(assets.image("""
         serpent 3
         """), SpriteKind.enemy)
+    tiles.place_on_tile(serpent_3, tiles.get_tile_location(1, 10))
     crane_1 = sprites.create(assets.image("""
         crane 1
         """), SpriteKind.enemy)
+    tiles.place_on_tile(crane_1, tiles.get_tile_location(1, 6))
     crane_2 = sprites.create(assets.image("""
         crane 2
         """), SpriteKind.enemy)
+    tiles.place_on_tile(crane_2, tiles.get_tile_location(2, 4))
     crane_3 = sprites.create(assets.image("""
         crane 3
         """), SpriteKind.enemy)
+    tiles.place_on_tile(crane_3, tiles.get_tile_location(3, 4))
     dragon_1 = sprites.create(assets.image("""
         Dragon 1
         """), SpriteKind.enemy)
+    tiles.place_on_tile(dragon_1, tiles.get_tile_location(3, 11))
     dragon_2 = sprites.create(assets.image("""
         Dragon 2
         """), SpriteKind.enemy)
+    tiles.place_on_tile(dragon_2, tiles.get_tile_location(0, 7))
     dragon_3 = sprites.create(assets.image("""
         Dragon 3
         """), SpriteKind.enemy)
+    tiles.place_on_tile(dragon_3, tiles.get_tile_location(0, 4))
+
+def on_on_overlap3():
+    game.set_dialog_frame(img("""
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7
+        """))
+    game.show_long_text("Tu dois etre Zack, n'est pas? Le neveu de notre cher voisin.",
+        DialogLayout.TOP)
+    game.set_dialog_frame(assets.image("""
+        Sprite2
+        """))
+    game.show_long_text("VOISIN ?! Mais cette sorciere ... elle parle de son oncle!!!!!!!!!!!!!!!",
+        DialogLayout.TOP)
+    game.set_dialog_frame(img("""
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7
+        """))
+    game.show_long_text("Malhereusement pour toi il n y a qu'un remede pour l'aider et il est introuvable... quel domage!",
+        DialogLayout.TOP)
+    game.set_dialog_frame(assets.image("""
+        Sprite2
+        """))
+    game.show_long_text("Elle y est pour quelque chose. Ne peut s'empecher de penser Zack",
+        DialogLayout.TOP)
+    game.set_dialog_frame(img("""
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7
+        """))
+    game.show_long_text("Bon. Puisque je vois que tu n'est pas trés bavard ... MONSTRES!!!!!!!!!!!!!!!!!",
+        DialogLayout.TOP)
+    sprites.destroy(blabla)
+    Appel_les_monstres()
+sprites.on_overlap(SpriteKind.player, SpriteKind.rien, on_on_overlap3)
 
 def on_left_pressed():
     héros.set_image(assets.image("""
@@ -216,6 +270,10 @@ def on_on_overlap4():
     sprites.destroy(arbre)
 sprites.on_overlap(SpriteKind.player, SpriteKind.tronc, on_on_overlap4)
 
+def on_on_overlap5(sprite2, otherSprite):
+    info.change_life_by(-1)
+sprites.on_overlap(SpriteKind.player, SpriteKind.enemy, on_on_overlap5)
+
 dragon_3: Sprite = None
 dragon_2: Sprite = None
 dragon_1: Sprite = None
@@ -225,12 +283,13 @@ crane_1: Sprite = None
 serpent_3: Sprite = None
 serpent_2: Sprite = None
 serpent_1: Sprite = None
-coffre: Sprite = None
+blabla2: Sprite = None
+blabla: Sprite = None
+coffre2: Sprite = None
 Enemypublicn1: Sprite = None
 arbre: Sprite = None
-blabla: Sprite = None
 héros: Sprite = None
-otherSprite: Sprite = None
+otherSprite2: Sprite = None
 bombe: Sprite = None
 grandpere: Sprite = None
 partie = 0

@@ -6,21 +6,83 @@ namespace SpriteKind {
     export const sorciere = SpriteKind.create()
     export const plante = SpriteKind.create()
     export const rien = SpriteKind.create()
+    export const coffre = SpriteKind.create()
 }
-sprites.onOverlap(SpriteKind.Player, SpriteKind.Papi, function (sprite) {
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Papi, function (sprite, otherSprite) {
+    game.setDialogFrame(img`
+        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+        `)
     game.showLongText("Jeune homme. Je n'ai pas beaucoup de temps pour te parler :", DialogLayout.Top)
-    game.showLongText(" ton oncle est dans la foret, blessé sans aucune aide, ta mére t'en a surrement déja parlé", DialogLayout.Top)
-    game.showLongText("Il est notre seul espoir, va l'aider, s'il te plait.", DialogLayout.Top)
+    game.showLongText(" ton cousin est dans la foret, blessé sans aucune aide, ta mére t'en a surrement déja parlé", DialogLayout.Top)
+    game.showLongText("Ce qu'elle ne t'as pourtant PAS dit ...", DialogLayout.Top)
+    game.setDialogFrame(assets.image`Field blanc`)
+    game.showLongText("Comment est ce qu'il pourrait savoir ca, lui?!", DialogLayout.Top)
+    game.setDialogFrame(img`
+        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
+        `)
+    game.showLongText("c'est que pour le guérir il faut trouver une herbe médicale. Et aussi, je sais que ta mere ne voulait pas que tu saches cela, mais  ton frere n'est pas VRAIMENT malade...", DialogLayout.Top)
+    game.setDialogFrame(assets.image`Field blanc`)
+    game.showLongText("Hein?! C'est pourtant ce que sa mere lui avait dit... pourquoi lui mentirais-t-elle?", DialogLayout.Top)
+    game.showLongText("Il a été ensorcele, mais en tout cas ... trouve la bonne herbe et guéris le.", DialogLayout.Top)
     sprites.destroyAllSpritesOfKind(SpriteKind.Papi)
+    game.showLongText("ATTANDEZ! COMMEN... Le papi était déja parti.", DialogLayout.Top)
     partie = 2
     créerpartie()
 })
-sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function () {
-    sprites.destroy(otherSprite)
-    sprites.destroy(bombe)
+function Appel_les_monstres () {
+    serpent_1 = sprites.create(assets.image`serpent 1`, SpriteKind.Enemy)
+    tiles.placeOnTile(serpent_1, tiles.getTileLocation(0, 11))
+    serpent_2 = sprites.create(assets.image`serpent 2`, SpriteKind.Enemy)
+    tiles.placeOnTile(serpent_2, tiles.getTileLocation(2, 11))
+    serpent_3 = sprites.create(assets.image`serpent 3`, SpriteKind.Enemy)
+    tiles.placeOnTile(serpent_3, tiles.getTileLocation(1, 10))
+    crane_1 = sprites.create(assets.image`crane 1`, SpriteKind.Enemy)
+    tiles.placeOnTile(crane_1, tiles.getTileLocation(1, 6))
+    crane_2 = sprites.create(assets.image`crane 2`, SpriteKind.Enemy)
+    tiles.placeOnTile(crane_2, tiles.getTileLocation(2, 4))
+    crane_3 = sprites.create(assets.image`crane 3`, SpriteKind.Enemy)
+    tiles.placeOnTile(crane_3, tiles.getTileLocation(3, 4))
+    dragon_1 = sprites.create(assets.image`Dragon 1`, SpriteKind.Enemy)
+    tiles.placeOnTile(dragon_1, tiles.getTileLocation(3, 11))
+    dragon_2 = sprites.create(assets.image`Dragon 2`, SpriteKind.Enemy)
+    tiles.placeOnTile(dragon_2, tiles.getTileLocation(0, 7))
+    dragon_3 = sprites.create(assets.image`Dragon 3`, SpriteKind.Enemy)
+    tiles.placeOnTile(dragon_3, tiles.getTileLocation(0, 4))
+}
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite2, otherSprite) {
+    info.changeLifeBy(-1)
 })
 controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
     héros.setImage(assets.image`Héros bas`)
+    direction = "bas"
 })
 function créerpartie () {
     if (partie == 1) {
@@ -38,11 +100,14 @@ function créerpartie () {
         game.showLongText("Comme sa mere lui a dit d'aller dans la salle de theatre abandonée du village, le voici.\"", DialogLayout.Top)
         game.showLongText("Les instructions de sa mere tournaient en boucle dans sa tete, dépuis qu'il est sortit de chez lui", DialogLayout.Top)
         game.setDialogFrame(assets.image`field`)
-        game.showLongText("Écoute moi bien, il faut absolument que tu ailles dans la foret.", DialogLayout.Top)
-        game.showLongText("Quand tu arriveras dans la foret ÉVITE d'aller le coté gauche avant d'avoir trouv ton oncle. ", DialogLayout.Top)
+        game.showLongText("Écoute moi bien, il faut absolument que tu ailles dans la foret enfin de retrouver ton cousin.", DialogLayout.Top)
+        game.setDialogFrame(assets.image`Field blanc`)
+        game.showLongText("SON COUSIN ?! Il les avaient laissées il y a longtemps ... juste avant qu ele village soit condamné. C'était comme un grand frere pour lui ... Avant qu'il parte", DialogLayout.Bottom)
+        game.setDialogFrame(assets.image`field`)
+        game.showLongText("Quand tu arriveras dans la foret ÉVITE d'aller le coté gauche AVANT d'avoir trouv ton cousin. ", DialogLayout.Top)
         game.showLongText("Zack ... Il est important que tu le retrouves, il est notre seul espoir.", DialogLayout.Top)
         game.setDialogFrame(assets.image`Field blanc`)
-        game.showLongText("Et ces instrictions ne fesaient que de le rendre plus perplexe. ", DialogLayout.Top)
+        game.showLongText("Et ces instrictions ne fesaient que de le rendre encore plus perplexe. ", DialogLayout.Top)
         game.showLongText("Le son de pas venant dans sa direction le sortirent de sa reflexion.", DialogLayout.Top)
         grandpere = sprites.create(assets.image`Papi`, SpriteKind.Papi)
         grandpere.setPosition(143, 112)
@@ -50,9 +115,71 @@ function créerpartie () {
     } else if (partie == 2) {
         info.setLife(5)
         héros.setKind(SpriteKind.Player)
+        if (controller.A.isPressed()) {
+            if (direction == "haut") {
+                bombe = sprites.createProjectileFromSprite(assets.image`Projectile`, héros, 0, -50)
+            } else if (direction == "bas") {
+                projectile = sprites.createProjectileFromSprite(img`
+                    . . . . . . . . . . . . . . . . 
+                    . . . . . . . . . . . . . . . . 
+                    . . . . . . . . . . . . . . . . 
+                    . . . . . . . . . . . . . . . . 
+                    . . . . . . . . . . . . . . . . 
+                    . . . . . . . . . . . . . . . . 
+                    . . . . . . . . . . . . . . . . 
+                    . . . . . . . . . . . . . . . . 
+                    . . . . . . . . . . . . . . . . 
+                    . . . . . . . . . . . . . . . . 
+                    . . . . . . . . . . . . . . . . 
+                    . . . . . . . . . . . . . . . . 
+                    . . . . . . . . . . . . . . . . 
+                    . . . . . . . . . . . . . . . . 
+                    . . . . . . . . . . . . . . . . 
+                    . . . . . . . . . . . . . . . . 
+                    `, héros, 0, 50)
+            } else if (direction == "gauche") {
+                projectile2 = sprites.createProjectileFromSprite(img`
+                    . . . . . . . . . . . . . . . . 
+                    . . . . . . . . . . . . . . . . 
+                    . . . . . . . . . . . . . . . . 
+                    . . . . . . . . . . . . . . . . 
+                    . . . . . . . . . . . . . . . . 
+                    . . . . . . . . . . . . . . . . 
+                    . . . . . . . . . . . . . . . . 
+                    . . . . . . . . . . . . . . . . 
+                    . . . . . . . . . . . . . . . . 
+                    . . . . . . . . . . . . . . . . 
+                    . . . . . . . . . . . . . . . . 
+                    . . . . . . . . . . . . . . . . 
+                    . . . . . . . . . . . . . . . . 
+                    . . . . . . . . . . . . . . . . 
+                    . . . . . . . . . . . . . . . . 
+                    . . . . . . . . . . . . . . . . 
+                    `, héros, -50, 0)
+            } else {
+                projectile3 = sprites.createProjectileFromSprite(img`
+                    . . . . . . . . . . . . . . . . 
+                    . . . . . . . . . . . . . . . . 
+                    . . . . . . . . . . . . . . . . 
+                    . . . . . . . . . . . . . . . . 
+                    . . . . . . . . . . . . . . . . 
+                    . . . . . . . . . . . . . . . . 
+                    . . . . . . . . . . . . . . . . 
+                    . . . . . . . . . . . . . . . . 
+                    . . . . . . . . . . . . . . . . 
+                    . . . . . . . . . . . . . . . . 
+                    . . . . . . . . . . . . . . . . 
+                    . . . . . . . . . . . . . . . . 
+                    . . . . . . . . . . . . . . . . 
+                    . . . . . . . . . . . . . . . . 
+                    . . . . . . . . . . . . . . . . 
+                    . . . . . . . . . . . . . . . . 
+                    `, héros, 0, 50)
+            }
+        }
+        bombe = sprites.create(assets.image`Projectile`, SpriteKind.Projectile)
         arbre = sprites.create(assets.image`Arbre`, SpriteKind.tronc)
         Enemypublicn1 = sprites.create(assets.image`sorciere`, SpriteKind.sorciere)
-        coffre = sprites.create(assets.image`Coffre`, SpriteKind.plante)
         blabla = sprites.create(assets.image`rien`, SpriteKind.rien)
         blabla2 = sprites.create(img`
             c . . . . . . . . . . . . . . c 
@@ -80,35 +207,23 @@ function créerpartie () {
         tiles.placeOnTile(arbre, tiles.getTileLocation(17, 20))
         tiles.placeOnTile(blabla, tiles.getTileLocation(3, 7))
         tiles.placeOnTile(blabla2, tiles.getTileLocation(3, 8))
+        tiles.placeOnTile(Enemypublicn1, tiles.getTileLocation(0, 7))
+    } else {
+        game.setDialogFrame(assets.image`Field blanc`)
+        game.showLongText("", DialogLayout.Full)
+        tiles.setCurrentTilemap(tilemap`niveau0`)
+        héros.ay = 0
+        controller.moveSprite(héros, 100, 100)
+        tiles.placeOnTile(héros, tiles.getTileLocation(29, 15))
+        coffre2 = sprites.create(assets.image`Coffre`, SpriteKind.coffre)
+        tiles.placeOnTile(coffre2, tiles.getTileLocation(29, 5))
     }
 }
 controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
     héros.setImage(assets.image`Héros haut`)
+    direction = "haut"
 })
-controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
-    héros.setImage(assets.image`Héros gauche`)
-})
-function Appel_les_monstres () {
-    serpent_1 = sprites.create(assets.image`serpent 1`, SpriteKind.Enemy)
-    tiles.placeOnTile(serpent_1, tiles.getTileLocation(0, 11))
-    serpent_2 = sprites.create(assets.image`serpent 2`, SpriteKind.Enemy)
-    tiles.placeOnTile(serpent_2, tiles.getTileLocation(2, 11))
-    serpent_3 = sprites.create(assets.image`serpent 3`, SpriteKind.Enemy)
-    tiles.placeOnTile(serpent_3, tiles.getTileLocation(1, 10))
-    crane_1 = sprites.create(assets.image`crane 1`, SpriteKind.Enemy)
-    tiles.placeOnTile(crane_1, tiles.getTileLocation(1, 6))
-    crane_2 = sprites.create(assets.image`crane 2`, SpriteKind.Enemy)
-    tiles.placeOnTile(crane_2, tiles.getTileLocation(2, 4))
-    crane_3 = sprites.create(assets.image`crane 3`, SpriteKind.Enemy)
-    tiles.placeOnTile(crane_3, tiles.getTileLocation(3, 4))
-    dragon_1 = sprites.create(assets.image`Dragon 1`, SpriteKind.Enemy)
-    tiles.placeOnTile(dragon_1, tiles.getTileLocation(3, 11))
-    dragon_2 = sprites.create(assets.image`Dragon 2`, SpriteKind.Enemy)
-    tiles.placeOnTile(dragon_2, tiles.getTileLocation(0, 7))
-    dragon_3 = sprites.create(assets.image`Dragon 3`, SpriteKind.Enemy)
-    tiles.placeOnTile(dragon_3, tiles.getTileLocation(0, 4))
-}
-sprites.onOverlap(SpriteKind.Player, SpriteKind.rien, function () {
+sprites.onOverlap(SpriteKind.Player, SpriteKind.rien, function (sprite, otherSprite) {
     game.setDialogFrame(img`
         7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
         7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
@@ -170,10 +285,11 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.rien, function () {
     sprites.destroy(blabla)
     Appel_les_monstres()
 })
-controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
-    héros.setImage(assets.image`Héros droite`)
+controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
+    héros.setImage(assets.image`Héros gauche`)
+    direction = "droite"
 })
-sprites.onOverlap(SpriteKind.Player, SpriteKind.tronc, function () {
+sprites.onOverlap(SpriteKind.Player, SpriteKind.tronc, function (sprite, otherSprite) {
     game.setDialogFrame(assets.image`Tronc`)
     game.showLongText("Tu est finalement arrivé? ", DialogLayout.Full)
     game.showLongText("Il faut chercher ton oncle dans la fotret (un vrai labyrinthe.)", DialogLayout.Full)
@@ -181,6 +297,27 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.tronc, function () {
     game.showLongText("EN gros évite la gauche", DialogLayout.Bottom)
     sprites.destroy(arbre)
 })
+controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
+    héros.setImage(assets.image`Héros droite`)
+    direction = "gauche"
+})
+sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function (sprite, otherSprite) {
+    let otherSprite2: Sprite = null
+    sprites.destroy(otherSprite2)
+    sprites.destroy(bombe)
+})
+let coffre2: Sprite = null
+let blabla2: Sprite = null
+let blabla: Sprite = null
+let Enemypublicn1: Sprite = null
+let arbre: Sprite = null
+let projectile3: Sprite = null
+let projectile2: Sprite = null
+let projectile: Sprite = null
+let bombe: Sprite = null
+let grandpere: Sprite = null
+let direction = ""
+let héros: Sprite = null
 let dragon_3: Sprite = null
 let dragon_2: Sprite = null
 let dragon_1: Sprite = null
@@ -190,15 +327,6 @@ let crane_1: Sprite = null
 let serpent_3: Sprite = null
 let serpent_2: Sprite = null
 let serpent_1: Sprite = null
-let blabla2: Sprite = null
-let blabla: Sprite = null
-let coffre: Sprite = null
-let Enemypublicn1: Sprite = null
-let arbre: Sprite = null
-let héros: Sprite = null
-let otherSprite: Sprite = null
-let bombe: Sprite = null
-let grandpere: Sprite = null
 let partie = 0
 scene.setBackgroundImage(assets.image`Lac`)
 game.showLongText("Salut joueur, ce jeu est un mélange d'action et d'histoire interactive. ", DialogLayout.Center)
@@ -213,4 +341,7 @@ forever(function () {
     if (info.life() == 0) {
         game.gameOver(false)
     }
+})
+forever(function () {
+	
 })

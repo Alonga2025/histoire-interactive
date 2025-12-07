@@ -49,11 +49,6 @@
         "mimeType": "image/x-mkcd-f4",
         "displayName": "Tronc"
     },
-    "jov3{i,Xv%Ky(z(Z[zXK": {
-        "data": "hwQQABAAAACwu8u8u7u7ALvszrvu7u4Lu+7Ou+5ORL6w7s677kREtLDuzrvuRES0sO7Ou+5ERLSw7ry77kREtLDuy9zuRES0sO7L3O5ERLSw7ry77kREtLDuzrvuRES0sO7Ou+5ERLSw7s677kREtLvuzrvuTkS+u+zOu+7u7guwu8u8u7u7AA==",
-        "mimeType": "image/x-mkcd-f4",
-        "displayName": "Coffre"
-    },
     "image11": {
         "data": "hwQQABAAAAAAAAAAAAAAAAAAAETu7gAAAAAATu7uAAAAAADu7u4AAAAAAO7u7gAAAAAA7uTuAAAAAADuTu7u5AAAAO7u5O5OAAAA7u7u7u4AAADu7u4AAAAAAO7u7gAAAAAA7u7uAAAAAADuTu4AAAAAAORO5AAAAAAARO5OAAAAAAAAAAAAAA==",
         "mimeType": "image/x-mkcd-f4",
@@ -88,11 +83,6 @@
         "data": "hwQQABAAAAAAwPz/AAAAAADMu7vM/wD7ADyzzLzd/L8AO8nM3b39u7AbydzMvd27sBHJ29293f+wkZnbu93d/7CZGdvd3d0MO5GR293dzQwbmTm53d3N/5uZmbnd3fvdOxmRmcvM/N2wG5GZzMy73wC7yxnBzMv9AAAAHDG7/wAAAADA/P8PAA==",
         "mimeType": "image/x-mkcd-f4",
         "displayName": "Champignon"
-    },
-    "image24": {
-        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-        "mimeType": "image/x-mkcd-f4",
-        "displayName": "myImage"
     },
     "image25": {
         "data": "hwQQABAAAADMAAAAzMwMAGwMAMxsZsYMfAzAbGZmZgx8x8xmZmZmxnx3ZmbG/P/GwHdmxmx3Z8/AbGbMd3d3xgDMzGx3d3fHAAAAfHfMdswAAAB8d8Z/wQAAAHx3ZnbPAAAAfHdmds8AAABsd8Z/zAAAAMB3zHbBAAAAAGx398wAAAAAwPwPAA==",
@@ -139,16 +129,6 @@
         "mimeType": "image/x-mkcd-f4",
         "displayName": "Dragon 2"
     },
-    "image29": {
-        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-        "mimeType": "image/x-mkcd-f4",
-        "displayName": "myImage0"
-    },
-    "image30": {
-        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-        "mimeType": "image/x-mkcd-f4",
-        "displayName": "myImage1"
-    },
     "image16": {
         "data": "hwQNAA4AAAAA/5+ZAAAAAAD///8JAAAA+f///w8AAAD/////DwAAAP/////v7pEA/59v9u/ukQD/+W8bbmZhAP//b/9uZmEA+f9m5m5mkQD5/2bmbmaRAPD//wAAAAAAAJ8PAAAAAAAAAAAAAAAAAA==",
         "mimeType": "image/x-mkcd-f4",
@@ -188,6 +168,36 @@
         "data": "hwQPABAAAAAA8P//AAAAAAD//08PAAAA8P//9P8Q7g7wRP///x/uDvBP////HxH/8P////8fEf/w/////x8RD/D/////HxEP8P/0//8fEf/w/////x8R//D0////H+4O8E//T/8Q7g4A9P/0DwAAAADw//8AAAAAAAAAAAAAAAA=",
         "mimeType": "image/x-mkcd-f4",
         "displayName": "myImage4"
+    },
+    "image24": {
+        "data": "hwQQABAAAAAAAAqQiAAAAAAKAIBnCACgAAAAAHiHAACQiIiKaHeKmIB3hoiIdndmAGh3d2dmhogAgIh2d3d3ZgAAgIpohohoAICIdnd3ZmYAiHd3ZmZmZoh3d4Zqd4eIiYiIiHdniogAAABoZ4hmZgAAAHiGeIeKAAoKiIh3CACgAAAAiYgAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "mauvaise plante"
+    },
+    "jov3{i,Xv%Ky(z(Z[zXK": {
+        "data": "hwQQABAAAACwu8u8u7u7ALvszrvu7u4Lu+7Ou+5ORL6w7s677kREtLDuzrvuRES0sO7Ou+5ERLSw7ry77kREtLDuy9zuRES0sO7L3O5ERLSw7ry77kREtLDuzrvuRES0sO7Ou+5ERLSw7s677kREtLvuzrvuTkS+u+zOu+7u7guwu8u8u7u7AA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "Coffre"
+    },
+    "image29": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "myImage"
+    },
+    "image30": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "myImage0"
+    },
+    "image34": {
+        "data": "hwQQABAAAAAAAACAmAAAAAAAAIBnCQAAAAAAAHiXAACAiIiJaHeIiIB3hpiIdndmAGh3d2dmhogAgIh2d3d3ZgAAgIhohohpAJCIdnd3ZmYAmXd3mWZmZoh3d4aYd4eZiIiIiHdniIkAAABoZ4hmZgAAAHiGeIeIAAAAiYh3CAAAAAAAiYgAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "plante"
+    },
+    "image33": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgIgIAAAAAAFJVJQIAAAAAVVVVRCIAAABVVVVVREQAAFVVVVVVVQAAVVVVJCJEAABSVUUkAAAAACAiAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "Projectile"
     },
     "*": {
         "mimeType": "image/x-mkcd-f4",
