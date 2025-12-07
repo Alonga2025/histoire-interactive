@@ -423,25 +423,6 @@ c c c c c c c c c c c c c c c
 c c c c c c c c c c c c c c c 
 c c c c c c c c c c c c c c c 
 `;
-            case "image11":
-            case "Pencarte":return img`
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. 4 e e e e e e e e e e e 4 4 . 
-. 4 4 e e e e e e e e e e e 4 . 
-. e e e e 4 e e e e e e e e e . 
-. e e e e e 4 e e e e e 4 4 e . 
-. e e e e e e 4 e e e e e 4 e . 
-. e e e e e e e e e e e e e 4 . 
-. . . . . . e e e . . . . . . . 
-. . . . . . e e e . . . . . . . 
-. . . . . . 4 e e . . . . . . . 
-. . . . . . e 4 e . . . . . . . 
-`;
             case "image12":
             case "rien":return img`
 c . . . . . . . . . . . . . . c 
@@ -497,24 +478,6 @@ c . . . . . . . . . . . . . . c
 . . . c 7 7 c b b b b f . . . . 
 . . . . c c b b b b 7 c . . . . 
 . . . . . f f f f f f . . . . . 
-`;
-            case "{dD{0zueR-bAr%ZO-z3a":
-            case "field":return img`
-b b b b b b b b b b b b b b b 
-b b b b b b b b b b b b b b b 
-b b b b b b b b b b b b b b b 
-b b b b b b b b b b b b b b b 
-b b b b b b b b b b b b b b b 
-b b b b b b b b b b b b b b b 
-b b b b b b b b b b b b b b b 
-b b b b b b b b b b b b b b b 
-b b b b b b b b b b b b b b b 
-b b b b b b b b b b b b b b b 
-b b b b b b b b b b b b b b b 
-b b b b b b b b b b b b b b b 
-b b b b b b b b b b b b b b b 
-b b b b b b b b b b b b b b b 
-b b b b b b b b b b b b b b b 
 `;
             case "image17":
             case "Champignon":return img`
@@ -1009,6 +972,43 @@ a . . 8 6 7 8 . 8 7 7 8 . . a .
 . . . 8 7 8 7 8 6 6 8 8 6 8 . . 
 . . . 8 6 8 6 9 6 6 9 9 6 8 . . 
 . . . 8 6 8 6 6 6 6 9 8 6 8 . . 
+`;
+            case "image11":
+            case "Pencarte":return img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. 4 e e e e e e e e e e e 4 4 . 
+. 4 4 e e e e e e e e e e e 4 . 
+. e e e e 4 e e e e e e e e e . 
+. e e e e e 4 e e e e e 4 4 e . 
+. e e e e e e 4 e e e e e 4 e . 
+. e e e e e e e e e e e e e 4 . 
+. . . . . . e e e . . . . . . . 
+. . . . . . e e e . . . . . . . 
+. . . . . . 4 e e . . . . . . . 
+. . . . . . e 4 e . . . . . . . 
+`;
+            case "{dD{0zueR-bAr%ZO-z3a":
+            case "field":return img`
+b b b b b b b b b b b b b b b 
+b b b b b b b b b b b b b b b 
+b b b b b b b b b b b b b b b 
+b b b b b b b b b b b b b b b 
+b b b b b b b b b b b b b b b 
+b b b b b b b b b b b b b b b 
+b b b b b b b b b b b b b b b 
+b b b b b b b b b b b b b b b 
+b b b b b b b b b b b b b b b 
+b b b b b b b b b b b b b b b 
+b b b b b b b b b b b b b b b 
+b b b b b b b b b b b b b b b 
+b b b b b b b b b b b b b b b 
+b b b b b b b b b b b b b b b 
+b b b b b b b b b b b b b b b 
 `;
         }
         return null;
