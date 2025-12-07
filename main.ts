@@ -179,24 +179,15 @@ function créerpartie () {
         grandpere.setPosition(143, 112)
         game.showLongText("Avance vers lui pour lui parler.", DialogLayout.Top)
     } else if (partie == 2) {
-        if (controller.B.isPressed()) {
-            if (direction == "haut") {
-                bombe = sprites.createProjectileFromSprite(assets.image`Projectile`, héros, 0, -50)
-            } else if (direction == "bas") {
-                projectile = sprites.createProjectileFromSprite(assets.image`Projectile`, héros, 0, 50)
-            } else if (direction == "gauche") {
-                projectile2 = sprites.createProjectileFromSprite(assets.image`Projectile`, héros, -50, 0)
-            } else {
-                projectile3 = sprites.createProjectileFromSprite(assets.image`Projectile`, héros, 0, 50)
-            }
-        }
-        controller.moveSprite(héros, 100, 100)
+        controller.moveSprite(héros)
+        tiles.placeOnTile(héros, tiles.getTileLocation(29, 22))
+        héros.setKind(SpriteKind.Player)
+        héros.ay = 0
+        scene.cameraFollowSprite(héros)
         tiles.setCurrentTilemap(tilemap`niveau`)
         game.setDialogFrame(assets.image`Sprite2`)
         game.showLongText("En entrant dans la foret, tu vois que les arbres commencent a changer de couleur et un picotement dans tes mains... Se pourrai-t-il que cette foret soit magique?", DialogLayout.Top)
         info.setLife(5)
-        héros.setKind(SpriteKind.Player)
-        héros.ay = 0
         bombe = sprites.create(assets.image`Projectile`, SpriteKind.Projectile)
         arbre = sprites.create(assets.image`Arbre`, SpriteKind.tronc)
         Enemypublicn1 = sprites.create(assets.image`sorciere`, SpriteKind.sorciere)
@@ -249,11 +240,20 @@ function créerpartie () {
         if (SpriteKind.Enemy == 0) {
             sprites.destroy(Enemypublicn1)
         }
-        tiles.placeOnTile(héros, tiles.getTileLocation(29, 24))
-        scene.cameraFollowSprite(héros)
         tiles.placeOnTile(arbre, tiles.getTileLocation(17, 20))
         tiles.placeOnTile(blabla, tiles.getTileLocation(3, 7))
         tiles.placeOnTile(Enemypublicn1, tiles.getTileLocation(0, 7))
+        if (controller.B.isPressed()) {
+            if (direction == "haut") {
+                bombe = sprites.createProjectileFromSprite(assets.image`Projectile`, héros, 0, -50)
+            } else if (direction == "bas") {
+                projectile = sprites.createProjectileFromSprite(assets.image`Projectile`, héros, 0, 50)
+            } else if (direction == "gauche") {
+                projectile2 = sprites.createProjectileFromSprite(assets.image`Projectile`, héros, -50, 0)
+            } else {
+                projectile3 = sprites.createProjectileFromSprite(assets.image`Projectile`, héros, 0, 50)
+            }
+        }
     } else {
         tiles.setCurrentTilemap(tilemap`niveau`)
         game.setDialogFrame(assets.image`Field blanc`)
@@ -453,15 +453,15 @@ sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function (sprite, oth
     sprites.destroy(bombe)
 })
 let coffre2: Sprite = null
+let projectile3: Sprite = null
+let projectile2: Sprite = null
+let projectile: Sprite = null
 let fond: Sprite = null
 let textSprite: TextSprite = null
 let cousin: Sprite = null
 let blabla: Sprite = null
 let Enemypublicn1: Sprite = null
 let arbre: Sprite = null
-let projectile3: Sprite = null
-let projectile2: Sprite = null
-let projectile: Sprite = null
 let bombe: Sprite = null
 let grandpere: Sprite = null
 let direction = ""
