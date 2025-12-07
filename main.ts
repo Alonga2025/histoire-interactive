@@ -29,12 +29,54 @@ function créerpartie () {
         héros.setStayInScreen(true)
         scene.setBackgroundImage(assets.image`Tout commence`)
         game.setDialogFrame(assets.image`Sprite2`)
-        game.showLongText("\"Zack était dans la salle de theatre abandonné.\"", DialogLayout.Top)
-        game.showLongText("Quand soudain, des pas se font entendre.", DialogLayout.Top)
+        game.showLongText("Alors que Zack s'appretait a erré un peu dans le village et a glisser dans la routine de sa vie (si on peut dire cela puisque le vilage a une clé de Démocles au dessous de sa tete bien qu'il n'en est pas au courant),", DialogLayout.Full)
+        game.showLongText("sa mere l'interomp, lui disant que ca ne valait meme pas la paine. Perplexe il obéi et il écoutat ce qu'elle avait a lui dire...", DialogLayout.Full)
+        game.showLongText("Comme sa mere lui a dit d'aller dans la salle de theatre abandonée du village, le voici.\"", DialogLayout.Top)
+        game.showLongText("Les instructions de sa mere tournaient en boucle dans sa tete, dépuis qu'il est sortit de chez lui", DialogLayout.Top)
+        game.setDialogFrame(img`
+            b b b b b b b b b b b b b b b 
+            b b b b b b b b b b b b b b b 
+            b b b b b b b b b b b b b b b 
+            b b b b b b b b b b b b b b b 
+            b b b b b b b b b b b b b b b 
+            b b b b b b b b b b b b b b b 
+            b b b b b b b b b b b b b b b 
+            b b b b b b b b b b b b b b b 
+            b b b b b b b b b b b b b b b 
+            b b b b b b b b b b b b b b b 
+            b b b b b b b b b b b b b b b 
+            b b b b b b b b b b b b b b b 
+            b b b b b b b b b b b b b b b 
+            b b b b b b b b b b b b b b b 
+            b b b b b b b b b b b b b b b 
+            `)
+        game.showLongText("Écoute moi bien, il faut absolument que tu ailles dans la foret, prends cette potion et garde la précieusement, tu ne l'utiliseras que si tu est en danger pour te défendre.", DialogLayout.Top)
+        game.showLongText("Quand tu arriveras dans la foret ÉVITE d'aller le coté gauche avant d'avoir trouv ton oncle. ", DialogLayout.Top)
+        game.showLongText("Zack ... Il est important que tu le retrouves, il est notre seul espoir.", DialogLayout.Top)
+        game.setDialogFrame(img`
+            1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+            1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+            1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+            1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+            1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+            1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+            1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+            1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+            1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+            1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+            1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+            1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+            1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+            1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+            1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+            `)
+        game.showLongText("Et ces instrictions ne fesaient que de le rendre plus perplexe. ", DialogLayout.Top)
+        game.showLongText("Le son de pas venant dans sa direction le sortirent de sa reflexion.", DialogLayout.Top)
         grandpere = sprites.create(assets.image`Papi`, SpriteKind.Papi)
         grandpere.setPosition(143, 112)
         game.showLongText("Avance vers lui pour lui parler.", DialogLayout.Top)
     } else if (partie == 2) {
+        info.setLife(3)
         héros.setKind(SpriteKind.Player)
         arbre = sprites.create(assets.image`Arbre`, SpriteKind.tronc)
         mySprite = sprites.create(assets.image`sorciere`, SpriteKind.Enemy)
@@ -74,6 +116,7 @@ controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
 })
 sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function (sprite, otherSprite) {
     sprites.destroy(otherSprite)
+    sprites.destroy(sprite)
 })
 let mySprite2: Sprite = null
 let coffre: Sprite = null
