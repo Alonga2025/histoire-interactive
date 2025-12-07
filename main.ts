@@ -19,50 +19,6 @@ sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function () {
     sprites.destroy(otherSprite)
     sprites.destroy(bombe)
 })
-sprites.onOverlap(SpriteKind.Player, SpriteKind.rien, function () {
-    game.setDialogFrame(img`
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
-        `)
-    game.showLongText("Tu dois etre Zack, n'est pas? Le neveu de notre cher voisin.", DialogLayout.Top)
-    game.showLongText("VOisin ?! Mais cette sorciere ... elle prarle de son oncle!!!!!!!!!!!!!!!", DialogLayout.Top)
-    game.showLongText("Malhereusement pour toi il n y a qu'un remede pour l'aider et il est introuvable... quel domage!", DialogLayout.Top)
-    game.setDialogFrame(assets.image`Sprite2`)
-    game.showLongText("Elle y est pour quelque chose. Ne peut s'empecher de penser Zack", DialogLayout.Top)
-    game.setDialogFrame(img`
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
-        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
-        `)
-    game.showLongText("Bon. Puisque je vois que tu n'est pas trés bavard ... MONSTRES!!!!!!!!!!!!!!!!!", DialogLayout.Top)
-    sprites.destroy(blabla)
-    Appel_les_monstres()
-})
 controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
     héros.setImage(assets.image`Héros bas`)
 })
@@ -98,6 +54,24 @@ function créerpartie () {
         Enemypublicn1 = sprites.create(assets.image`sorciere`, SpriteKind.sorciere)
         coffre = sprites.create(assets.image`Coffre`, SpriteKind.plante)
         blabla = sprites.create(assets.image`rien`, SpriteKind.rien)
+        blabla2 = sprites.create(img`
+            c . . . . . . . . . . . . . . c 
+            . c . . . . . . . . . . . . c . 
+            . . c . . . . . . . . . . c . . 
+            . . . c . . . . . . . . c . . . 
+            . . . . c . . . . . . c . . . . 
+            . . . . . c . . . . c . . . . . 
+            . . . . . . c . . c . . . . . . 
+            . . . . . . . c . . . . . . . . 
+            . . . . . . . . c . . . . . . . 
+            . . . . . . c . . c . . . . . . 
+            . . . . . c . . . . c . . . . . 
+            . . . . c . . . . . . c . . . . 
+            . . . c . . . . . . . . c . . . 
+            . . c . . . . . . . . . . c . . 
+            . c . . . . . . . . . . . . c . 
+            c . . . . . . . . . . . . . . c 
+            `, SpriteKind.rien)
         héros.ay = 0
         controller.moveSprite(héros, 100, 100)
         tiles.setCurrentTilemap(tilemap`niveau`)
@@ -105,6 +79,7 @@ function créerpartie () {
         scene.cameraFollowSprite(héros)
         tiles.placeOnTile(arbre, tiles.getTileLocation(17, 20))
         tiles.placeOnTile(blabla, tiles.getTileLocation(3, 7))
+        tiles.placeOnTile(blabla2, tiles.getTileLocation(3, 8))
     }
 }
 controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
@@ -123,7 +98,7 @@ function Appel_les_monstres () {
     crane_1 = sprites.create(assets.image`crane 1`, SpriteKind.Enemy)
     tiles.placeOnTile(crane_1, tiles.getTileLocation(1, 6))
     crane_2 = sprites.create(assets.image`crane 2`, SpriteKind.Enemy)
-    tiles.placeOnTile(crane_2, tiles.getTileLocation(3, 6))
+    tiles.placeOnTile(crane_2, tiles.getTileLocation(2, 4))
     crane_3 = sprites.create(assets.image`crane 3`, SpriteKind.Enemy)
     tiles.placeOnTile(crane_3, tiles.getTileLocation(3, 4))
     dragon_1 = sprites.create(assets.image`Dragon 1`, SpriteKind.Enemy)
@@ -131,8 +106,70 @@ function Appel_les_monstres () {
     dragon_2 = sprites.create(assets.image`Dragon 2`, SpriteKind.Enemy)
     tiles.placeOnTile(dragon_2, tiles.getTileLocation(0, 7))
     dragon_3 = sprites.create(assets.image`Dragon 3`, SpriteKind.Enemy)
-    tiles.placeOnTile(dragon_3, tiles.getTileLocation(0, 8))
+    tiles.placeOnTile(dragon_3, tiles.getTileLocation(0, 4))
 }
+sprites.onOverlap(SpriteKind.Player, SpriteKind.rien, function () {
+    game.setDialogFrame(img`
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+        `)
+    game.showLongText("Tu dois etre Zack, n'est pas? Le neveu de notre cher voisin.", DialogLayout.Top)
+    game.setDialogFrame(assets.image`Sprite2`)
+    game.showLongText("VOISIN ?! Mais cette sorciere ... elle parle de son oncle!!!!!!!!!!!!!!!", DialogLayout.Top)
+    game.setDialogFrame(img`
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+        `)
+    game.showLongText("Malhereusement pour toi il n y a qu'un remede pour l'aider et il est introuvable... quel domage!", DialogLayout.Top)
+    game.setDialogFrame(assets.image`Sprite2`)
+    game.showLongText("Elle y est pour quelque chose. Ne peut s'empecher de penser Zack", DialogLayout.Top)
+    game.setDialogFrame(img`
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+        `)
+    game.showLongText("Bon. Puisque je vois que tu n'est pas trés bavard ... MONSTRES!!!!!!!!!!!!!!!!!", DialogLayout.Top)
+    sprites.destroy(blabla)
+    Appel_les_monstres()
+})
 controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
     héros.setImage(assets.image`Héros droite`)
 })
@@ -153,10 +190,11 @@ let crane_1: Sprite = null
 let serpent_3: Sprite = null
 let serpent_2: Sprite = null
 let serpent_1: Sprite = null
+let blabla2: Sprite = null
+let blabla: Sprite = null
 let coffre: Sprite = null
 let Enemypublicn1: Sprite = null
 let arbre: Sprite = null
-let blabla: Sprite = null
 let héros: Sprite = null
 let otherSprite: Sprite = null
 let bombe: Sprite = null
