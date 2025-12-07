@@ -95,9 +95,14 @@
         "displayName": "myImage0"
     },
     "image15": {
-        "data": "hwQOABAAAAAAAP//AAAAAAD/VVUPAMAMAF9Vvf/MvMPwVbVE1E25y/BV1UTUTbnD8FVVS8xNubvAVVXFG+2+s8BVVcXs3u3DwFVVVbve7cMAX1VVtUu+ywBfVVW1u7wMAPBVVbW7zAAAAFxVu8sAAAAAwP/PDAAA",
+        "data": "hwQNAA4AAAAAAAAAAAAAAABP/wAAAAAA8P//AAAAAAD0/yLiTkQlAPT/IuJORCUA//8vzE5ERQD/9C8bTkRFAP9PL/Lv7iUA/////+/uJQD0////DwAAAPT///8PAAAAQP///wQAAAAA/09EAAAAAA==",
         "mimeType": "image/x-mkcd-f4",
         "displayName": "Oncle"
+    },
+    "image16": {
+        "data": "hwQOABAAAAAAAMD//wwAAAAAv1W7z+4AAPBVVbvrxAwAX1XF78+8DABfVcsbbbnD8FXVRP+dObPwVbVE1J25u/BVtUTUnbnD8FXVRP9NtMsAX1XLG9TtwwBfVcXv1O0MAPBVVbvbxAwAAL9Vu88MAAAAwP//DAAA",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "myImage1"
     },
     "*": {
         "mimeType": "image/x-mkcd-f4",
