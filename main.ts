@@ -60,6 +60,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.rien, function () {
         7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
         `)
     game.showLongText("Bon. Puisque je vois que tu n'est pas trés bavard ... MONSTRES!!!!!!!!!!!!!!!!!", DialogLayout.Top)
+    sprites.destroy(blabla)
     Appel_les_monstres()
 })
 controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
@@ -91,10 +92,10 @@ function créerpartie () {
         grandpere.setPosition(143, 112)
         game.showLongText("Avance vers lui pour lui parler.", DialogLayout.Top)
     } else if (partie == 2) {
-        info.setLife(3)
+        info.setLife(5)
         héros.setKind(SpriteKind.Player)
         arbre = sprites.create(assets.image`Arbre`, SpriteKind.tronc)
-        mySprite = sprites.create(assets.image`sorciere`, SpriteKind.sorciere)
+        Enemypublicn1 = sprites.create(assets.image`sorciere`, SpriteKind.sorciere)
         coffre = sprites.create(assets.image`Coffre`, SpriteKind.plante)
         blabla = sprites.create(assets.image`rien`, SpriteKind.rien)
         héros.ay = 0
@@ -106,6 +107,9 @@ function créerpartie () {
         tiles.placeOnTile(blabla, tiles.getTileLocation(3, 7))
     }
 }
+controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
+	
+})
 controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
     héros.setImage(assets.image`Héros haut`)
 })
@@ -119,60 +123,9 @@ function Appel_les_monstres () {
     crane_1 = sprites.create(assets.image`crane 1`, SpriteKind.Enemy)
     crane_2 = sprites.create(assets.image`crane 2`, SpriteKind.Enemy)
     crane_3 = sprites.create(assets.image`crane 3`, SpriteKind.Enemy)
-    mySprite11 = sprites.create(img`
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        `, SpriteKind.Enemy)
-    mySprite6 = sprites.create(img`
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        `, SpriteKind.Enemy)
-    mySprite7 = sprites.create(img`
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        `, SpriteKind.Enemy)
+    dragon_1 = sprites.create(assets.image`Dragon 1`, SpriteKind.Enemy)
+    dragon_2 = sprites.create(assets.image`Dragon 2`, SpriteKind.Enemy)
+    dragon_3 = sprites.create(assets.image`Dragon 3`, SpriteKind.Enemy)
 }
 controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
     héros.setImage(assets.image`Héros droite`)
@@ -185,9 +138,9 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.tronc, function () {
     game.showLongText("EN gros évite la gauche", DialogLayout.Bottom)
     sprites.destroy(arbre)
 })
-let mySprite7: Sprite = null
-let mySprite6: Sprite = null
-let mySprite11: Sprite = null
+let dragon_3: Sprite = null
+let dragon_2: Sprite = null
+let dragon_1: Sprite = null
 let crane_3: Sprite = null
 let crane_2: Sprite = null
 let crane_1: Sprite = null
@@ -195,7 +148,7 @@ let serpent_3: Sprite = null
 let serpent_2: Sprite = null
 let serpent_1: Sprite = null
 let coffre: Sprite = null
-let mySprite: Sprite = null
+let Enemypublicn1: Sprite = null
 let arbre: Sprite = null
 let blabla: Sprite = null
 let héros: Sprite = null
