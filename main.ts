@@ -50,7 +50,7 @@ function créerpartie () {
             b b b b b b b b b b b b b b b 
             b b b b b b b b b b b b b b b 
             `)
-        game.showLongText("Écoute moi bien, il faut absolument que tu ailles dans la foret, prends cette potion et garde la précieusement, tu ne l'utiliseras que si tu est en danger pour te défendre.", DialogLayout.Top)
+        game.showLongText("Écoute moi bien, il faut absolument que tu ailles dans la foret.", DialogLayout.Top)
         game.showLongText("Quand tu arriveras dans la foret ÉVITE d'aller le coté gauche avant d'avoir trouv ton oncle. ", DialogLayout.Top)
         game.showLongText("Zack ... Il est important que tu le retrouves, il est notre seul espoir.", DialogLayout.Top)
         game.setDialogFrame(assets.image`Field blanc`)
