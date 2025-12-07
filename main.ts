@@ -7,6 +7,14 @@ namespace SpriteKind {
     export const plante = SpriteKind.create()
     export const rien = SpriteKind.create()
 }
+sprites.onOverlap(SpriteKind.Player, SpriteKind.tronc, function (sprite3, otherSprite3) {
+    game.setDialogFrame(assets.image`Tronc`)
+    game.showLongText("Tu est finalement arrivé? ", DialogLayout.Full)
+    game.showLongText("Il faut chercher ton oncle dans la fotret (un vrai labyrinthe.)", DialogLayout.Full)
+    game.showLongText("Dans cette  foret tu trouveras peut etre des amis, mais les ennemis ne sont pas loin.", DialogLayout.Full)
+    game.showLongText("EN gros évite la gauche", DialogLayout.Bottom)
+    sprites.destroy(otherSprite3)
+})
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Papi, function (sprite, otherSprite) {
     game.showLongText("Jeune homme. Je n'ai pas beaucoup de temps pour te parler :", DialogLayout.Top)
     game.showLongText(" ton oncle est dans la foret, blessé sans aucune aide, ta mére t'en a surrement déja parlé", DialogLayout.Top)
@@ -78,7 +86,7 @@ function créerpartie () {
 controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
     héros.setImage(assets.image`Héros haut`)
 })
-sprites.onOverlap(SpriteKind.Player, SpriteKind.rien, function (sprite, otherSprite) {
+sprites.onOverlap(SpriteKind.Player, SpriteKind.rien, function (sprite2, otherSprite2) {
     game.showLongText("Tu dois etre Zack, n'est pas? Le neveu de notre cher voisin.", DialogLayout.Top)
     game.showLongText("VOisin ?! Mais cette sorciere ... elle prarle de son oncle!!!!!!!!!!!!!!!", DialogLayout.Top)
     game.showLongText("Malhereusement pour toi il n y a qu'un remede pour l'aider et il est introuvable... quel domage!", DialogLayout.Bottom)
@@ -87,20 +95,12 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.rien, function (sprite, otherSpr
 controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
     héros.setImage(assets.image`Héros gauche`)
 })
-sprites.onOverlap(SpriteKind.Player, SpriteKind.tronc, function (sprite, otherSprite) {
-    game.setDialogFrame(assets.image`Tronc`)
-    game.showLongText("Tu est finalement arrivé? ", DialogLayout.Full)
-    game.showLongText("Il faut chercher ton oncle dans la fotret (un vrai labyrinthe.)", DialogLayout.Full)
-    game.showLongText("Dans cette  foret tu trouveras peut etre des amis, mais les ennemis ne sont pas loin.", DialogLayout.Full)
-    game.showLongText("EN gros évite la gauche", DialogLayout.Bottom)
-    sprites.destroy(otherSprite)
+sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function (sprite4, otherSprite4) {
+    sprites.destroy(otherSprite4)
+    sprites.destroy(sprite4)
 })
 controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
     héros.setImage(assets.image`Héros droite`)
-})
-sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function (sprite, otherSprite) {
-    sprites.destroy(otherSprite)
-    sprites.destroy(sprite)
 })
 let mySprite2: Sprite = null
 let coffre: Sprite = null
