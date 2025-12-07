@@ -115,14 +115,23 @@ controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
 })
 function Appel_les_monstres () {
     serpent_1 = sprites.create(assets.image`serpent 1`, SpriteKind.Enemy)
+    tiles.placeOnTile(serpent_1, tiles.getTileLocation(0, 11))
     serpent_2 = sprites.create(assets.image`serpent 2`, SpriteKind.Enemy)
+    tiles.placeOnTile(serpent_2, tiles.getTileLocation(2, 11))
     serpent_3 = sprites.create(assets.image`serpent 3`, SpriteKind.Enemy)
+    tiles.placeOnTile(serpent_3, tiles.getTileLocation(1, 10))
     crane_1 = sprites.create(assets.image`crane 1`, SpriteKind.Enemy)
+    tiles.placeOnTile(crane_1, tiles.getTileLocation(1, 6))
     crane_2 = sprites.create(assets.image`crane 2`, SpriteKind.Enemy)
+    tiles.placeOnTile(crane_2, tiles.getTileLocation(3, 6))
     crane_3 = sprites.create(assets.image`crane 3`, SpriteKind.Enemy)
+    tiles.placeOnTile(crane_3, tiles.getTileLocation(3, 4))
     dragon_1 = sprites.create(assets.image`Dragon 1`, SpriteKind.Enemy)
+    tiles.placeOnTile(dragon_1, tiles.getTileLocation(3, 11))
     dragon_2 = sprites.create(assets.image`Dragon 2`, SpriteKind.Enemy)
+    tiles.placeOnTile(dragon_2, tiles.getTileLocation(0, 7))
     dragon_3 = sprites.create(assets.image`Dragon 3`, SpriteKind.Enemy)
+    tiles.placeOnTile(dragon_3, tiles.getTileLocation(0, 8))
 }
 controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
     héros.setImage(assets.image`Héros droite`)

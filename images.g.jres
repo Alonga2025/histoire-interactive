@@ -39,11 +39,6 @@
         "mimeType": "image/x-mkcd-f4",
         "displayName": "Héros gauche"
     },
-    "image6": {
-        "data": "hwQNABAAAAAAAAAAAAAAAADwTwAA8O8AAP9P7u7/7wBA//Tu7v8i//D//+7u/yL/8P//7u7/Ig/wT//u7v8iD/BE/+7u/yL/AP//7u7/Iv8A///u7v/vAADwTwQA8O8AAAAAAAAAAAAAAAAAAAAAAA==",
-        "mimeType": "image/x-mkcd-f4",
-        "displayName": "Héros haut"
-    },
     "image9": {
         "data": "hwQYACgAAAAAAAAAAAAAAAAAAADADADMAAAAAAAAAAAAAAAAAMDMAGzMzMkAAAAAAAAAAAAAAAAAnGzMZmycyQwAAAAAAAAAAAAAAMCZZmzGzJmWDAAAAAAAAAAAzMDMnJmWyczGbJkMAAAAAAAAAMDGbMaWaZnJbMbMmcwAAAAAAADAbMZmzJmZmWbGzJzJZgwAAAAAAJxmzMxsxpZpZszGnJbJDAAAAADAmZZsxmzMmZnJbMZsmcwMAMwAAGxpmWbMzGyZmcZmzJZplsbMzADMmZlpxmzGzJZpzMzMzGyZzMzMwJmZmZnJZsxsmZlmxszMmcnMzMzAmZmZmcbMzJaZaWbMzJaZaczMzADMmZlpZszMzGyZzMbMnJlmxszMAABsaZlsxsxsmZnJZszMlmbGzMwAAMCZlszMbMyZmWlsxpmZyQwAzAAAAJxmbMZsxpZpxszMnJbJDAAAAAAAwGzGZsyZmZlmzGacyWYMAAAAAAAAwMbMzJZpmWbGbGaZzAwAAAAAAAAAzADMbJmWyczMbJkMAAAAAAAAAAAAAAAAnGnGbMaZlgwAAAAAAAAAAAAAAADAyWbMZpzJDAAAAAAAAAAAAAAAAADMbAzMzMkAAAAAAAAAAAAAAAAAAADADADADAAAAAA=",
         "mimeType": "image/x-mkcd-f4",
@@ -79,30 +74,10 @@
         "mimeType": "image/x-mkcd-f4",
         "displayName": "sorciere"
     },
-    "image18": {
-        "data": "hwQNAA4AAAAAAAAAAAAAAACfDwAAAAAA8P//AAAAAAD5/2bmbmaRAPn/ZuZuZpEA//9vzG5mYQD/+W8bbmZhAP+fb/bv7pEA/////+/ukQD/////DwAAAPn///8PAAAAAP///wkAAAAA/5+ZAAAAAA==",
-        "mimeType": "image/x-mkcd-f4",
-        "displayName": "Cousin en magicien"
-    },
     "image15": {
         "data": "hwQNAA4AAAALAACwAAAAAHBPvwALCwsA8P//AAAAAAD093/uFxH/APT/734eEf8A///vzB4RHwD/9+8bFxEfAP9P7/5/fv8A/////+/n/wD3///3DwALAPR///8PAAAAsP///wsLsAAL/09LAAALAA==",
         "mimeType": "image/x-mkcd-f4",
         "displayName": "Cousin malade"
-    },
-    "image13": {
-        "data": "hwQNAA4AAAAAAAAAAAAAAPBPDwAAAAAA8P//AAAAAAD0/+/uHhH/APT/7+4eEf8A///vzB4RHwD/9O8bHhEfAP9P7/7v7v8A/////+/u/wD/////DwAAAPT///8PAAAAAP///wQAAAAA/09EAAAAAA==",
-        "mimeType": "image/x-mkcd-f4",
-        "displayName": "Cousin guéri"
-    },
-    "image14": {
-        "data": "hwQNAA4AAAAA/09EAAAAAAD///8EAAAA9P///w8AAAD/////DwAAAP/////v7v8A/0/v/u/u/wD/9O8bHhEfAP//78weER8A9P/v7h4R/wD0/+/uHhH/APD//wAAAAAA8E8PAAAAAAAAAAAAAAAAAA==",
-        "mimeType": "image/x-mkcd-f4",
-        "displayName": "Cousin guéri0"
-    },
-    "image16": {
-        "data": "hwQNAA4AAAAA/5+ZAAAAAAD///8JAAAA+f///w8AAAD/////DwAAAP/////v7pEA/59v9u/ukQD/+W8bbmZhAP//b8xuZmEA+f9m5m5mkQD5/2bmbmaRAPD//wAAAAAAAJ8PAAAAAAAAAAAAAAAAAA==",
-        "mimeType": "image/x-mkcd-f4",
-        "displayName": "Cousin en magicien0"
     },
     "{dD{0zueR-bAr%ZO-z3a": {
         "data": "hwQPAA8AAAC7u7u7u7u7C7u7u7u7u7sLu7u7u7u7uwu7u7u7u7u7C7u7u7u7u7sLu7u7u7u7uwu7u7u7u7u7C7u7u7u7u7sLu7u7u7u7uwu7u7u7u7u7C7u7u7u7u7sLu7u7u7u7uwu7u7u7u7u7C7u7u7u7u7sLu7u7u7u7uws=",
@@ -163,6 +138,56 @@
         "data": "hwQYABgAAAAAAAAAAAAAAMAMAAAAAAAAAAAAAMDNAAAAAAAAAAAAzMDdDAAAAAAAAMAMzMzdDAAAAAAAAMAMzLzdzQAAAADADAC83d3dzQAAAADAzLvd3d3dvQwAAMwAvFXV3d3duwwAAMwMW1XV3d29y8wAAMy8VVXd3d3du80AAMBbVdXdu93V3c0AzMBVVdXdVVtV3cUAzMxVVVXdVcVV1cUAzFxVVVXdW7VV1cUAwFxVVVXVu1W8zM0AAFxVX1XVvVW8y8wAAFxV/7VVvcy73AwAAFxV8bVbvbvL3QwAAFxVVRWzxczM3AwAAMBVVTUzxc0AwAwAAMBV1bUzxQwAwAwAAABcVbVVxQAAAAAAAADAVcXMDAAAAAAAAAAAzAwAAAAAAAA=",
         "mimeType": "image/x-mkcd-f4",
         "displayName": "Dragon 2"
+    },
+    "image29": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "myImage0"
+    },
+    "image30": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "myImage1"
+    },
+    "image16": {
+        "data": "hwQNAA4AAAAA/5+ZAAAAAAD///8JAAAA+f///w8AAAD/////DwAAAP/////v7pEA/59v9u/ukQD/+W8bbmZhAP//b/9uZmEA+f9m5m5mkQD5/2bmbmaRAPD//wAAAAAAAJ8PAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "Cousin en magicien0"
+    },
+    "image18": {
+        "data": "hwQNAA4AAAAAAAAAAAAAAACfDwAAAAAA8P//AAAAAAD5/2bmbmaRAPn/ZuZuZpEA//9v/25mYQD/+W8bbmZhAP+fb/bv7pEA/////+/ukQD/////DwAAAPn///8PAAAAAP///wkAAAAA/5+ZAAAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "Cousin en magicien"
+    },
+    "image14": {
+        "data": "hwQNAA4AAAAA/09EAAAAAAD///8EAAAA9P///w8AAAD/////DwAAAP/////v7v8A/0/v/u/u/wD/9O8bHhEfAP//7/8eER8A9P/v7h4R/wD0/+/uHhH/APD//wAAAAAA8E8PAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "Cousin guéri0"
+    },
+    "image13": {
+        "data": "hwQNAA4AAAAAAAAAAAAAAPBPDwAAAAAA8P//AAAAAAD0/+/uHhH/APT/7+4eEf8A///v/x4RHwD/9O8bHhEfAP9P7/7v7v8A/////+/u/wD/////DwAAAPT///8PAAAAAP///wQAAAAA/09EAAAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "Cousin guéri"
+    },
+    "image31": {
+        "data": "hwQPABAAAAAA8P//AAAAAAD//08PAAAA8P//9P8Q7g7wRP/v7h7uDvBP/+4bHhH/8P//7v8eEf/w///u7h4RD/D//+7uHhEP8P/07v8eEf/w///uGx4R//D0/+/uHu4O8E//T/8Q7g4A///0DwAAAADw//8AAAAAAAAAAAAAAAA=",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "myImage2"
+    },
+    "image28": {
+        "data": "hwQPABAAAAAA8P//AAAAAAD//58PAAAA8P//+f9g7g7wmf/v7m7uDvCf/+4bbmaR8P//7v9uZpHw///u7m5mAfD//+7ubmYB8P/57v9uZpHw///uG25mkfD5/+/ubu4O8J//n/9g7g4A+f/5DwAAAADw//8AAAAAAAAAAAAAAAA=",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "myImage3"
+    },
+    "image6": {
+        "data": "hwQNABAAAAAAAAAAAAAAAADwTwAA8O8AAP9P/+//7wBA//T/7/8i//D////v/yL/8P///+//Ig/wT///7/8iD/BE///v/yL/AP///+//Iv8A////7//vAADwTwQA8O8AAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "Héros haut"
+    },
+    "image32": {
+        "data": "hwQPABAAAAAA8P//AAAAAAD//08PAAAA8P//9P8Q7g7wRP///x/uDvBP////HxH/8P////8fEf/w/////x8RD/D/////HxEP8P/0//8fEf/w/////x8R//D0////H+4O8E//T/8Q7g4A9P/0DwAAAADw//8AAAAAAAAAAAAAAAA=",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "myImage4"
     },
     "*": {
         "mimeType": "image/x-mkcd-f4",

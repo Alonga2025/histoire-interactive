@@ -362,25 +362,6 @@ f f e e e b f e e . .
 . f f f f f f f f f . 
 . . f f . . . f f . . 
 `;
-            case "image6":
-            case "Héros haut":return img`
-. . . . . . . . . . . . . 
-. . . 4 f f f f . . . . . 
-. . f f f f f 4 f f . . . 
-. f f f f f 4 4 f f f . . 
-. f f 4 f f f f f f f . . 
-. 4 4 f f f f f f f 4 . . 
-. . e e e e e e e e 4 . . 
-. . e e e e e e e e . . . 
-. . e e e e e e e e . . . 
-. . e e e e e e e e . . . 
-. . f f f f f f f f . . . 
-. f f f f f f f f f f . . 
-. f f 2 2 2 2 2 2 f f . . 
-. e e 2 2 2 2 2 2 e e . . 
-. . . f f f f f f . . . . 
-. . . f f . . f f . . . . 
-`;
             case "image9":
             case "Arbre":return img`
 ........................
@@ -536,23 +517,6 @@ c . . . . . . . . . . . . . . c
 . . . . c c b b b b 7 c . . . . 
 . . . . . f f f f f f . . . . . 
 `;
-            case "image18":
-            case "Cousin en magicien":return img`
-. . . 9 9 f f f f f 9 . . 
-. . f f f f f f f f f . . 
-. f f f f f 9 f f f f f f 
-. 9 f f f f f 9 f f f f f 
-. f f 6 6 f f f f f f f f 
-. . f 6 6 6 6 6 f f f f 9 
-. . . 6 6 c b 6 f f f f 9 
-. . . e e c 1 f f f f f 9 
-. . . e e e e f f f f 9 . 
-. . . 6 6 6 6 e e . . . . 
-. . . 6 6 6 6 e e . . . . 
-. . . 6 6 6 6 e e . . . . 
-. . . 1 1 1 1 1 1 . . . . 
-. . . 9 9 6 6 9 9 . . . . 
-`;
             case "image15":
             case "Cousin malade":return img`
 b . . 4 4 f f f f 7 4 . b 
@@ -569,57 +533,6 @@ b . . e 7 c 1 f f f f f 4
 . . . 1 1 1 1 7 e . . . . 
 . b . f f f f f f b . . b 
 . . . f f 1 1 f f . . b . 
-`;
-            case "image13":
-            case "Cousin guéri":return img`
-. . . 4 4 f f f f f 4 . . 
-. f f f f f f f f f f . . 
-. f f f f f 4 f f f f f f 
-. 4 f f f f f 4 f f f f f 
-. f f f f f f f f f f f f 
-. . f e e e e e f f f f 4 
-. . . e e c b e f f f f 4 
-. . . e e c 1 f f f f f 4 
-. . . e e e e f f f f 4 . 
-. . . 1 1 1 1 e e . . . . 
-. . . 1 1 1 1 e e . . . . 
-. . . 1 1 1 1 e e . . . . 
-. . . f f f f f f . . . . 
-. . . f f 1 1 f f . . . . 
-`;
-            case "image14":
-            case "Cousin guéri0":return img`
-. . 4 f f f f f 4 4 . . . 
-. . f f f f f f f f f f . 
-f f f f f f 4 f f f f f . 
-f f f f f 4 f f f f f 4 . 
-f f f f f f f f f f f f . 
-4 f f f f e e e e e f . . 
-4 f f f f e b c e e . . . 
-4 f f f f f 1 c e e . . . 
-. 4 f f f f e e e e . . . 
-. . . . e e 1 1 1 1 . . . 
-. . . . e e 1 1 1 1 . . . 
-. . . . e e 1 1 1 1 . . . 
-. . . . f f f f f f . . . 
-. . . . f f 1 1 f f . . . 
-`;
-            case "image16":
-            case "Cousin en magicien0":return img`
-. . 9 f f f f f 9 9 . . . 
-. . f f f f f f f f f . . 
-f f f f f f 9 f f f f f . 
-f f f f f 9 f f f f f 9 . 
-f f f f f f f f 6 6 f f . 
-9 f f f f 6 6 6 6 6 f . . 
-9 f f f f 6 b c 6 6 . . . 
-9 f f f f f 1 c e e . . . 
-. 9 f f f f e e e e . . . 
-. . . . e e 6 6 6 6 . . . 
-. . . . e e 6 6 6 6 . . . 
-. . . . e e 6 6 6 6 . . . 
-. . . . 1 1 1 1 1 1 . . . 
-. . . . 9 9 6 6 9 9 . . . 
 `;
             case "{dD{0zueR-bAr%ZO-z3a":
             case "field":return img`
@@ -895,6 +808,188 @@ cddddddddd5555ccbbc.....
 ....ccbbcbddddccdddcc...
 ......cccdd555dcccccc...
 ........cccccccc........
+`;
+            case "image29":
+            case "myImage0":return img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`;
+            case "image30":
+            case "myImage1":return img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`;
+            case "image16":
+            case "Cousin en magicien0":return img`
+. . 9 f f f f f 9 9 . . . 
+. . f f f f f f f f f . . 
+f f f f f f 9 f f f f f . 
+f f f f f 9 f f f f f 9 . 
+f f f f f f f f 6 6 f f . 
+9 f f f f 6 6 6 6 6 f . . 
+9 f f f f 6 b f 6 6 . . . 
+9 f f f f f 1 f e e . . . 
+. 9 f f f f e e e e . . . 
+. . . . e e 6 6 6 6 . . . 
+. . . . e e 6 6 6 6 . . . 
+. . . . e e 6 6 6 6 . . . 
+. . . . 1 1 1 1 1 1 . . . 
+. . . . 9 9 6 6 9 9 . . . 
+`;
+            case "image18":
+            case "Cousin en magicien":return img`
+. . . 9 9 f f f f f 9 . . 
+. . f f f f f f f f f . . 
+. f f f f f 9 f f f f f f 
+. 9 f f f f f 9 f f f f f 
+. f f 6 6 f f f f f f f f 
+. . f 6 6 6 6 6 f f f f 9 
+. . . 6 6 f b 6 f f f f 9 
+. . . e e f 1 f f f f f 9 
+. . . e e e e f f f f 9 . 
+. . . 6 6 6 6 e e . . . . 
+. . . 6 6 6 6 e e . . . . 
+. . . 6 6 6 6 e e . . . . 
+. . . 1 1 1 1 1 1 . . . . 
+. . . 9 9 6 6 9 9 . . . . 
+`;
+            case "image14":
+            case "Cousin guéri0":return img`
+. . 4 f f f f f 4 4 . . . 
+. . f f f f f f f f f f . 
+f f f f f f 4 f f f f f . 
+f f f f f 4 f f f f f 4 . 
+f f f f f f f f f f f f . 
+4 f f f f e e e e e f . . 
+4 f f f f e b f e e . . . 
+4 f f f f f 1 f e e . . . 
+. 4 f f f f e e e e . . . 
+. . . . e e 1 1 1 1 . . . 
+. . . . e e 1 1 1 1 . . . 
+. . . . e e 1 1 1 1 . . . 
+. . . . f f f f f f . . . 
+. . . . f f 1 1 f f . . . 
+`;
+            case "image13":
+            case "Cousin guéri":return img`
+. . . 4 4 f f f f f 4 . . 
+. f f f f f f f f f f . . 
+. f f f f f 4 f f f f f f 
+. 4 f f f f f 4 f f f f f 
+. f f f f f f f f f f f f 
+. . f e e e e e f f f f 4 
+. . . e e f b e f f f f 4 
+. . . e e f 1 f f f f f 4 
+. . . e e e e f f f f 4 . 
+. . . 1 1 1 1 e e . . . . 
+. . . 1 1 1 1 e e . . . . 
+. . . 1 1 1 1 e e . . . . 
+. . . f f f f f f . . . . 
+. . . f f 1 1 f f . . . . 
+`;
+            case "image31":
+            case "myImage2":return img`
+. . . . . . . . . . . . . . . 
+. . f f f f f f f f f f . . . 
+. f f 4 f f f f f f 4 f f . . 
+f f f 4 4 f f f f f f 4 f f . 
+f f f f f f f f 4 f f f f f . 
+f f f f f f f f f f f f f f . 
+f f 4 f e e e e e e f f 4 f . 
+f 4 f e e e e e e e e 4 f f . 
+. f f e b f e e f b e f f . . 
+. . f e 1 f e e f 1 e f . . . 
+. . . e e e e e e e e . . . . 
+. . 1 1 1 1 1 1 1 1 1 1 . . . 
+. . e e 1 1 1 1 1 1 e e . . . 
+. . e e 1 1 1 1 1 1 e e . . . 
+. . e e f f f f f f e e . . . 
+. . . . f f . . f f . . . . . 
+`;
+            case "image28":
+            case "myImage3":return img`
+. . . . . . . . . . . . . . . 
+. . f f f f f f f f f f . . . 
+. f f 9 f f f f f f 9 f 9 . . 
+f f f 9 9 f f f f f f 9 f f . 
+f f f f f f f f 9 f f f f f . 
+f f f f f f f f f f f f f f . 
+f f 9 f e e e e e e f f 9 f . 
+f 9 f e e e e e e e e 9 f f . 
+. f f e b f e e f b e f f . . 
+. . f e 1 f e e f 1 e f . . . 
+. . . e e e e e e e e . . . . 
+. . 6 6 6 6 6 6 6 6 6 6 . . . 
+. . e e 6 6 6 6 6 6 e e . . . 
+. . e e 6 6 6 6 6 6 e e . . . 
+. . e e 1 1 1 1 1 1 e e . . . 
+. . . . 9 9 . . 9 9 . . . . . 
+`;
+            case "image6":
+            case "Héros haut":return img`
+. . . . . . . . . . . . . 
+. . . 4 f f f f . . . . . 
+. . f f f f f 4 f f . . . 
+. f f f f f 4 4 f f f . . 
+. f f 4 f f f f f f f . . 
+. 4 4 f f f f f f f 4 . . 
+. . f f f f f f f f 4 . . 
+. . f f f f f f f f . . . 
+. . f f f f f f f f . . . 
+. . e e e e e e e e . . . 
+. . f f f f f f f f . . . 
+. f f f f f f f f f f . . 
+. f f 2 2 2 2 2 2 f f . . 
+. e e 2 2 2 2 2 2 e e . . 
+. . . f f f f f f . . . . 
+. . . f f . . f f . . . . 
+`;
+            case "image32":
+            case "myImage4":return img`
+. . . . . . . . . . . . . . . 
+. . f f f f f f f f f f . . . 
+. f f 4 f f f f f f 4 f 4 . . 
+f f f 4 4 f f f f f f 4 f f . 
+f f f f f f f f 4 f f f f f . 
+f f f f f f f f f f f f f f . 
+f f 4 f f f f f f f f f 4 f . 
+f 4 f f f f f f f f f 4 f f . 
+. f f f f f f f f f f f f . . 
+. . f f f f f f f f f f . . . 
+. . . f f f f f f f f . . . . 
+. . 1 1 1 1 1 1 1 1 1 1 . . . 
+. . e e 1 1 1 1 1 1 e e . . . 
+. . e e 1 1 1 1 1 1 e e . . . 
+. . e e f f f f f f e e . . . 
+. . . . f f . . f f . . . . . 
 `;
         }
         return null;
