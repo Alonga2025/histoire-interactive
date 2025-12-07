@@ -107,9 +107,6 @@ function créerpartie () {
         tiles.placeOnTile(blabla, tiles.getTileLocation(3, 7))
     }
 }
-controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
-	
-})
 controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
     héros.setImage(assets.image`Héros haut`)
 })
