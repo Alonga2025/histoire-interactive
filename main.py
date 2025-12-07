@@ -8,7 +8,20 @@ class SpriteKind:
     plante = SpriteKind.create()
     rien = SpriteKind.create()
 
-def on_on_overlap(sprite, otherSprite):
+def on_on_overlap(sprite3, otherSprite3):
+    game.set_dialog_frame(assets.image("""
+        Tronc
+        """))
+    game.show_long_text("Tu est finalement arrivé? ", DialogLayout.FULL)
+    game.show_long_text("Il faut chercher ton oncle dans la fotret (un vrai labyrinthe.)",
+        DialogLayout.FULL)
+    game.show_long_text("Dans cette  foret tu trouveras peut etre des amis, mais les ennemis ne sont pas loin.",
+        DialogLayout.FULL)
+    game.show_long_text("EN gros évite la gauche", DialogLayout.BOTTOM)
+    sprites.destroy(otherSprite3)
+sprites.on_overlap(SpriteKind.player, SpriteKind.tronc, on_on_overlap)
+
+def on_on_overlap2(sprite, otherSprite):
     global partie
     game.show_long_text("Jeune homme. Je n'ai pas beaucoup de temps pour te parler :",
         DialogLayout.TOP)
@@ -19,7 +32,7 @@ def on_on_overlap(sprite, otherSprite):
     sprites.destroy_all_sprites_of_kind(SpriteKind.Papi)
     partie = 2
     créerpartie()
-sprites.on_overlap(SpriteKind.player, SpriteKind.Papi, on_on_overlap)
+sprites.on_overlap(SpriteKind.player, SpriteKind.Papi, on_on_overlap2)
 
 def on_down_pressed():
     héros.set_image(assets.image("""
@@ -52,22 +65,8 @@ def créerpartie():
             DialogLayout.TOP)
         game.show_long_text("Les instructions de sa mere tournaient en boucle dans sa tete, dépuis qu'il est sortit de chez lui",
             DialogLayout.TOP)
-        game.set_dialog_frame(img("""
-            b b b b b b b b b b b b b b b
-            b b b b b b b b b b b b b b b
-            b b b b b b b b b b b b b b b
-            b b b b b b b b b b b b b b b
-            b b b b b b b b b b b b b b b
-            b b b b b b b b b b b b b b b
-            b b b b b b b b b b b b b b b
-            b b b b b b b b b b b b b b b
-            b b b b b b b b b b b b b b b
-            b b b b b b b b b b b b b b b
-            b b b b b b b b b b b b b b b
-            b b b b b b b b b b b b b b b
-            b b b b b b b b b b b b b b b
-            b b b b b b b b b b b b b b b
-            b b b b b b b b b b b b b b b
+        game.set_dialog_frame(assets.image("""
+            field
             """))
         game.show_long_text("Écoute moi bien, il faut absolument que tu ailles dans la foret.",
             DialogLayout.TOP)
@@ -118,7 +117,7 @@ def on_up_pressed():
         """))
 controller.up.on_event(ControllerButtonEvent.PRESSED, on_up_pressed)
 
-def on_on_overlap2(sprite2, otherSprite2):
+def on_on_overlap3(sprite2, otherSprite2):
     game.show_long_text("Tu dois etre Zack, n'est pas? Le neveu de notre cher voisin.",
         DialogLayout.TOP)
     game.show_long_text("VOisin ?! Mais cette sorciere ... elle prarle de son oncle!!!!!!!!!!!!!!!",
@@ -126,7 +125,7 @@ def on_on_overlap2(sprite2, otherSprite2):
     game.show_long_text("Malhereusement pour toi il n y a qu'un remede pour l'aider et il est introuvable... quel domage!",
         DialogLayout.BOTTOM)
     game.show_long_text("Elle y est pour quelque chose", DialogLayout.BOTTOM)
-sprites.on_overlap(SpriteKind.player, SpriteKind.rien, on_on_overlap2)
+sprites.on_overlap(SpriteKind.player, SpriteKind.rien, on_on_overlap3)
 
 def on_right_pressed():
     héros.set_image(assets.image("""
@@ -134,29 +133,16 @@ def on_right_pressed():
         """))
 controller.right.on_event(ControllerButtonEvent.PRESSED, on_right_pressed)
 
-def on_on_overlap3(sprite3, otherSprite3):
-    game.set_dialog_frame(assets.image("""
-        Tronc
-        """))
-    game.show_long_text("Tu est finalement arrivé? ", DialogLayout.FULL)
-    game.show_long_text("Il faut chercher ton oncle dans la fotret (un vrai labyrinthe.)",
-        DialogLayout.FULL)
-    game.show_long_text("Dans cette  foret tu trouveras peut etre des amis, mais les ennemis ne sont pas loin.",
-        DialogLayout.FULL)
-    game.show_long_text("EN gros évite la gauche", DialogLayout.BOTTOM)
-    sprites.destroy(otherSprite3)
-sprites.on_overlap(SpriteKind.player, SpriteKind.tronc, on_on_overlap3)
+def on_on_overlap4(sprite4, otherSprite4):
+    sprites.destroy(otherSprite4)
+    sprites.destroy(sprite4)
+sprites.on_overlap(SpriteKind.projectile, SpriteKind.enemy, on_on_overlap4)
 
 def on_left_pressed():
     héros.set_image(assets.image("""
         Héros droite
         """))
 controller.left.on_event(ControllerButtonEvent.PRESSED, on_left_pressed)
-
-def on_on_overlap4(sprite4, otherSprite4):
-    sprites.destroy(otherSprite4)
-    sprites.destroy(sprite4)
-sprites.on_overlap(SpriteKind.projectile, SpriteKind.enemy, on_on_overlap4)
 
 mySprite2: Sprite = None
 coffre: Sprite = None
