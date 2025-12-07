@@ -180,7 +180,7 @@ function créerpartie () {
         game.showLongText("Avance vers lui pour lui parler.", DialogLayout.Top)
     } else if (partie == 2) {
         controller.moveSprite(héros)
-        tiles.placeOnTile(héros, tiles.getTileLocation(29, 22))
+        tiles.placeOnTile(héros, tiles.getTileLocation(22, 29))
         héros.setKind(SpriteKind.Player)
         héros.ay = 0
         scene.cameraFollowSprite(héros)
@@ -198,6 +198,7 @@ function créerpartie () {
         textSprite.setFlag(SpriteFlag.RelativeToCamera, true)
         textSprite.left = 5
         textSprite.bottom = 117
+        textSprite.z = 50
         textSprite.setIcon(img`
             f 
             f 
