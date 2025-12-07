@@ -9,7 +9,7 @@ namespace SpriteKind {
 }
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Papi, function (sprite, otherSprite) {
     game.showLongText("Jeune homme. Je n'ai pas beaucoup de temps pour te parler :", DialogLayout.Top)
-    game.showLongText(" ton oncle est dans la foret, blessé sans aucune aide, ta mére t'en a surrement déja parlé", DialogLayout.Bottom)
+    game.showLongText(" ton oncle est dans la foret, blessé sans aucune aide, ta mére t'en a surrement déja parlé", DialogLayout.Top)
     game.showLongText("Il est notre seul espoir, va l'aider, s'il te plait.", DialogLayout.Top)
     sprites.destroyAllSpritesOfKind(SpriteKind.Papi)
     partie = 2
@@ -87,7 +87,7 @@ function créerpartie () {
         tiles.setCurrentTilemap(tilemap`niveau`)
         tiles.placeOnTile(héros, tiles.getTileLocation(24, 24))
         scene.cameraFollowSprite(héros)
-        tiles.placeOnTile(arbre, tiles.getTileLocation(17, 22))
+        tiles.placeOnTile(arbre, tiles.getTileLocation(17, 20))
         tiles.placeOnTile(mySprite2, tiles.getTileLocation(3, 7))
     }
 }
