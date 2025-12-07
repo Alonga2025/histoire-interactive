@@ -178,7 +178,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Papi, function (sprite, otherSpr
         4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
         4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 
         `)
-    game.showLongText("Il a été ensorcele, mais en tout cas ... trouve la bonne herbe et guéris le. COntinue jausqu'a ce que les arbres commencent a changer de couleur, si tu vois un grand arbre aproche toi de lui (touche le) et tu pourras voir les instructions.", DialogLayout.Top)
+    game.showLongText("Il a été ensorcele, mais en tout cas ... trouve la bonne herbe et guéris le. Continue jausqu'a ce que les arbres commencent a changer de couleur, si tu vois un grand arbre aproche toi de lui (touche le) et tu pourras voir les instructions.", DialogLayout.Top)
     sprites.destroyAllSpritesOfKind(SpriteKind.Papi)
     game.setDialogFrame(assets.image`Field blanc`)
     game.showLongText("ATTANDEZ! COMMEN... Le papi était déja parti.", DialogLayout.Top)
@@ -363,24 +363,13 @@ function créerpartie () {
         fond.setFlag(SpriteFlag.RelativeToCamera, true)
         fond.left = 5
         fond.bottom = 117
-        if (controller.B.isPressed()) {
-            if (direction == "haut") {
-                bombe = sprites.createProjectileFromSprite(assets.image`Projectile`, héros, 0, -50)
-            } else if (direction == "bas") {
-                projectile = sprites.createProjectileFromSprite(assets.image`Projectile`, héros, 0, 50)
-            } else if (direction == "gauche") {
-                projectile2 = sprites.createProjectileFromSprite(assets.image`Projectile`, héros, -50, 0)
-            } else {
-                projectile3 = sprites.createProjectileFromSprite(assets.image`Projectile`, héros, 0, 50)
-            }
-        }
         if (SpriteKind.Enemy == 0) {
             sprites.destroy(Enemypublicn1)
         }
     } else {
         tiles.setCurrentTilemap(tilemap`niveau`)
         game.setDialogFrame(assets.image`Field blanc`)
-        game.showLongText("Finalement il est arrivée a guérir son cousin, c'est maintenant  le temps de partir...", DialogLayout.Full)
+        game.showLongText("Finalement il est arrivée a guérir son cousin, c'est maintenant  le temps de partir...", DialogLayout.Top)
         héros.ay = 0
         controller.moveSprite(héros, 100, 100)
         tiles.placeOnTile(héros, tiles.getTileLocation(29, 15))
@@ -557,11 +546,11 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.tronc, function () {
     game.showLongText("EN gros évite la gauche", DialogLayout.Full)
     sprites.destroy(arbre)
 })
-let mySprite: Sprite = null
-let coffre2: Sprite = null
 let projectile3: Sprite = null
 let projectile2: Sprite = null
 let projectile: Sprite = null
+let mySprite: Sprite = null
+let coffre2: Sprite = null
 let fond: Sprite = null
 let textSprite: TextSprite = null
 let mauvaise_plante: Sprite = null
@@ -600,5 +589,20 @@ créerpartie()
 forever(function () {
     if (info.life() == 0) {
         game.gameOver(false)
+    }
+})
+forever(function () {
+    while (partie == 0) {
+        if (controller.B.isPressed()) {
+            if (direction == "haut") {
+                bombe = sprites.createProjectileFromSprite(assets.image`Projectile`, héros, 0, -50)
+            } else if (direction == "bas") {
+                projectile = sprites.createProjectileFromSprite(assets.image`Projectile`, héros, 0, 50)
+            } else if (direction == "gauche") {
+                projectile2 = sprites.createProjectileFromSprite(assets.image`Projectile`, héros, -50, 0)
+            } else {
+                projectile3 = sprites.createProjectileFromSprite(assets.image`Projectile`, héros, 0, 50)
+            }
+        }
     }
 })
