@@ -279,7 +279,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.rien, function (sprite, otherSpr
         1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
         1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
         `)
-    game.showLongText("VOISIN ?! Cette sorciere palrait de son coisin.", DialogLayout.Top)
+    game.showLongText("VOISIN ?! Cette sorciere palrait de son cousin.", DialogLayout.Top)
     game.setDialogCursor(img`
         7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
         7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 

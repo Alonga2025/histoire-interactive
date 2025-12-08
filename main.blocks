@@ -80,7 +80,7 @@ e e 4 e e e e e e e e e e e 4
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-`</field><data>{"commentRefs":[],"fieldData":{"img":null}}</data></shadow></value><next><block type="game_show_long_text" id="?6:_v[Auv828-(KZxDnY"><field name="layout">DialogLayout.Top</field><value name="str"><shadow type="text" id="r~j^6c0o{b$M^|On*tjb"><field name="TEXT">VOISIN ?! Cette sorciere palrait de son coisin.</field></shadow></value><next><block type="game_dialog_set_cursor" id="+t*x@]IU(#(7K|1~a`Rx"><value name="frame"><shadow type="screen_image_picker" id="(FpX,%1kv`x54hZ^e9cQ"><field name="img">img`
+`</field><data>{"commentRefs":[],"fieldData":{"img":null}}</data></shadow></value><next><block type="game_show_long_text" id="?6:_v[Auv828-(KZxDnY"><field name="layout">DialogLayout.Top</field><value name="str"><shadow type="text" id="r~j^6c0o{b$M^|On*tjb"><field name="TEXT">VOISIN ?! Cette sorciere palrait de son cousin.</field></shadow></value><next><block type="game_dialog_set_cursor" id="+t*x@]IU(#(7K|1~a`Rx"><value name="frame"><shadow type="screen_image_picker" id="(FpX,%1kv`x54hZ^e9cQ"><field name="img">img`
 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
