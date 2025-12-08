@@ -109,7 +109,7 @@ function Appel_les_monstres () {
     dragon_1 = sprites.create(assets.image`Dragon 1`, SpriteKind.Enemy)
     tiles.placeOnTile(dragon_1, tiles.getTileLocation(3, 11))
     dragon_2 = sprites.create(assets.image`Dragon 2`, SpriteKind.Enemy)
-    tiles.placeOnTile(dragon_2, tiles.getTileLocation(1, 12))
+    tiles.placeOnTile(dragon_2, tiles.getTileLocation(1, 11))
     dragon_3 = sprites.create(assets.image`Dragon 3`, SpriteKind.Enemy)
     tiles.placeOnTile(dragon_3, tiles.getTileLocation(0, 4))
 }
@@ -344,9 +344,9 @@ controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
     } else if (direction == "bas") {
         projectile = sprites.createProjectileFromSprite(assets.image`Projectile`, héros, 0, 50)
     } else if (direction == "gauche") {
-        projectile2 = sprites.createProjectileFromSprite(assets.image`Projectile`, héros, 0, 50)
+        projectile2 = sprites.createProjectileFromSprite(assets.image`Projectile`, héros, -50, 0)
     } else {
-        projectile3 = sprites.createProjectileFromSprite(assets.image`Projectile`, héros, 0, -50)
+        projectile3 = sprites.createProjectileFromSprite(assets.image`Projectile`, héros, 50, 0)
     }
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.parle, function (sprite, otherSprite) {
@@ -436,6 +436,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.instructions, function (sprite, 
         e e 4 e e e e e e e e e e e 4 
         `)
     game.showLongText("Ce n'est pas la bonne plante! C'était un piege et la sorciere n'était qu'un pion! La vraie plante se trouve tout droit jausqu'a la fin de la foret a droite.", DialogLayout.Top)
+    sprites.destroy(otherSprite)
 })
 controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
     héros.setImage(assets.image`Héros droite`)
@@ -495,7 +496,4 @@ forever(function () {
     if (info.life() == 0) {
         game.gameOver(false)
     }
-})
-forever(function () {
-	
 })
