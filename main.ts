@@ -13,20 +13,12 @@ namespace SpriteKind {
     export const parle = SpriteKind.create()
     export const mauvaise = SpriteKind.create()
 }
-sprites.onOverlap(SpriteKind.Player, SpriteKind.mauvaise, function (sprite) {
-    game.showLongText("Approche toi de la pencarte pour voir ce qu'elle dit ou va directement donner la plante a ton cousin.", DialogLayout.Top)
-    mauvaiseplanteramasée = 1
-    mauvaise_plante.setFlag(SpriteFlag.RelativeToCamera, true)
-    mauvaise_plante.left = 18
-    mauvaise_plante.bottom = 117
-    mauvaise_plante.z = 50
-})
 sprites.onOverlap(SpriteKind.Player, SpriteKind.magicien, function (sprite, otherSprite) {
     if (plantesramasées == 1) {
         mauvaiseplanteramasée = 0
         game.showLongText("Bravo tu as réussi a guérir ton cousin! Il s'avère qu’il est un mage. Il va t'amener avec lui au palais du royaume tout en t’aidant a maitriser le feu (ton superpouvoir) pour que tu l’aides a sauver le village.", DialogLayout.Top)
         game.gameOver(true)
-    } else if (mauvaiseplanteramasée == 0) {
+    } else if (mauvaiseplanteramasée == 1) {
         game.setDialogFrame(assets.image`Sprite2`)
         game.showLongText("C’était un piège : la sorcière n'était qu’un pion et tu as donné la mauvaise plante a ton cousin, qui est en train de rendre son dernier souffle.", DialogLayout.Top)
         game.gameOver(false)
@@ -386,6 +378,15 @@ controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
     héros.setImage(assets.image`Héros gauche`)
     direction = "droite"
 })
+sprites.onOverlap(SpriteKind.Player, SpriteKind.plante, function (sprite, otherSprite) {
+    game.showLongText("Va donner la plante a ton cousin.", DialogLayout.Bottom)
+    plantesramasées = 1
+    bonne_plante.setFlag(SpriteFlag.RelativeToCamera, true)
+    bonne_plante.left = 16
+    bonne_plante.bottom = 117
+    bonne_plante.z = 50
+    sprites.destroy(blabla2)
+})
 sprites.onOverlap(SpriteKind.Player, SpriteKind.tronc, function (sprite, otherSprite) {
     game.setDialogFrame(assets.image`Tronc`)
     game.showLongText("Tu est finalement arrivé? ", DialogLayout.Full)
@@ -394,14 +395,13 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.tronc, function (sprite, otherSp
     game.showLongText("EN gros évite la gauche", DialogLayout.Full)
     sprites.destroy(arbre)
 })
-sprites.onOverlap(SpriteKind.Player, SpriteKind.plante, function (sprite) {
-    game.showLongText("Va donner la plante a ton cousin.", DialogLayout.Bottom)
-    plantesramasées = 1
-    bonne_plante.setFlag(SpriteFlag.RelativeToCamera, true)
-    bonne_plante.left = 16
-    bonne_plante.bottom = 117
-    bonne_plante.z = 50
-    sprites.destroy(blabla2)
+sprites.onOverlap(SpriteKind.Player, SpriteKind.mauvaise, function (sprite, otherSprite) {
+    game.showLongText("Approche toi de la pencarte pour voir ce qu'elle dit ou va directement donner la plante a ton cousin.", DialogLayout.Top)
+    mauvaiseplanteramasée = 1
+    mauvaise_plante.setFlag(SpriteFlag.RelativeToCamera, true)
+    mauvaise_plante.left = 18
+    mauvaise_plante.bottom = 117
+    mauvaise_plante.z = 50
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.instructions, function (sprite, otherSprite) {
     game.setDialogFrame(img`
@@ -439,6 +439,7 @@ let fond: Sprite = null
 let textSprite: TextSprite = null
 let bonne_plante: Sprite = null
 let pancarte: Sprite = null
+let mauvaise_plante: Sprite = null
 let cousin: Sprite = null
 let blabla: Sprite = null
 let Enemypublicn1: Sprite = null
@@ -457,9 +458,8 @@ let serpent_3: Sprite = null
 let serpent_2: Sprite = null
 let serpent_1: Sprite = null
 let blabla2: Sprite = null
-let plantesramasées = 0
 let mauvaiseplanteramasée = 0
-let mauvaise_plante: Sprite = null
+let plantesramasées = 0
 let partie = 0
 scene.setBackgroundImage(assets.image`Lac`)
 game.showLongText("Salut joueur, ce jeu est un mélange d'action et d'histoire interactive. ", DialogLayout.Center)
